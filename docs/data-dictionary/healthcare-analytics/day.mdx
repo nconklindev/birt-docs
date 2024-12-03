@@ -7,12 +7,6 @@ import entities from "@site/src/data/entities.json";
 
 # Day
 
-:::warning
-
-The Healthcare Analytics entities and columns are available only from the API and cannot be used in Dataviews or to create reports at this time. To get the Healthcare Analytics data, use the Retrieve Data (POST /v1/commons/data/multi_read) API operation. Retrieve only the WORKUNIT and WORKUNIT_TIMESERIES data and ignore the Employee and Location data.
-
-:::
-
 {/* prettier-ignore */}
 {Array.isArray(entities.day.description) ? (
   entities.day.description.map((paragraph, index) => (
