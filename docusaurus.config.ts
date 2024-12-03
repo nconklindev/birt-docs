@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import 'dotenv/config'
 
 const config: Config = {
   title: "WFM Reporting",
@@ -28,6 +29,10 @@ const config: Config = {
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
+  },
+
+  customFields: {
+    USE_SSH: process.env.USE_SSH
   },
 
   presets: [
