@@ -33,7 +33,8 @@ const config: Config = {
   },
 
   customFields: {
-    useSSH: process.env.USE_SSH
+    useSSH: process.env.USE_SSH,
+    gitUser: process.env.GIT_USER
   },
 
   presets: [
