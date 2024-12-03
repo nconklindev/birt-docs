@@ -17,8 +17,9 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "nconklindev", // Usually your GitHub org/user name.
-  projectName: "WFM Reporting", // Usually your repo name.
+  projectName: "birt-docs", // Usually your repo name.
   trailingSlash: false,
+  deploymentBranch: "gh-pages",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
@@ -32,7 +33,7 @@ const config: Config = {
   },
 
   customFields: {
-    USE_SSH: process.env.USE_SSH
+    useSSH: process.env.USE_SSH
   },
 
   presets: [
