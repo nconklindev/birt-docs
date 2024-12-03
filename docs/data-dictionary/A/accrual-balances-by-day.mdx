@@ -1,0 +1,47 @@
+---
+title: Accrual Balances by Day
+description: The Data Dictionary entry for the Accrual Balances by Day entity
+slug: /data-dictionary/accrual-balances-by-day
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Accrual Balances by Day
+
+{Array.isArray(entities.accrualBalancesByDay.description) ? (
+entities.accrualBalancesByDay.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : (<p>{entities.accrualBalancesByDay.description}</p>
+)}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.accrualBalancesByDay.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.accrualBalancesByDay.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.accrualBalancesByDay.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.accrualBalancesByDay.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.accrualBalancesByDay.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.accrualBalancesByDay.relationship}
+  simple={true}
+/>

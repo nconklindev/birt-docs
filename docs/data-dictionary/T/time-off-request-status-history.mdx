@@ -1,0 +1,63 @@
+---
+title: Time Off Request Status History
+description: The Data Dictionary entry for the Time Off Request Status History entity
+slug: /data-dictionary/time-off-request-status-history
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Time Off Request Status History
+
+{/* prettier-ignore */}
+{Array.isArray(entities.timeOffRequestStatusHistory.description) ? (
+  entities.timeOffRequestStatusHistory.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.timeOffRequestStatusHistory.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.timeOffRequestStatusHistory.supportedTypes} />
+
+## Data Granularity
+
+{entities.timeOffRequestStatusHistory.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.timeOffRequestStatusHistory.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.timeOffRequestStatusHistory.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.timeOffRequestStatusHistory.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.timeOffRequestStatusHistory.relationship}
+  simple={true}
+/>
+
+{entities.timeOffRequestStatusHistory.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.timeOffRequestStatusHistory.additionalInfo) ? (
+      entities.timeOffRequestStatusHistory.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.timeOffRequestStatusHistory.additionalInfo}</p>
+    )}
+
+  </>
+)}

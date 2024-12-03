@@ -1,0 +1,63 @@
+---
+title: Workload - Budgeted Count
+description: The Data Dictionary entry for the Workload - Budgeted Count entity
+slug: /data-dictionary/workload-budgeted-count
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Workload - Budgeted Count
+
+{/* prettier-ignore */}
+{Array.isArray(entities.workloadBudgetedCount.description) ? (
+  entities.workloadBudgetedCount.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.workloadBudgetedCount.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.workloadBudgetedCount.supportedTypes} />
+
+## Data Granularity
+
+{entities.workloadBudgetedCount.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.workloadBudgetedCount.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.workloadBudgetedCount.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.workloadBudgetedCount.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.workloadBudgetedCount.relationship}
+  simple={true}
+/>
+
+{entities.workloadBudgetedCount.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.workloadBudgetedCount.additionalInfo) ? (
+      entities.workloadBudgetedCount.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.workloadBudgetedCount.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,63 @@
+---
+title: Leave Case Document
+description: The Data Dictionary entry for the Leave Case Document entity
+slug: /data-dictionary/leave-case-document
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Leave Case Document
+
+{/* prettier-ignore */}
+{Array.isArray(entities.leaveCaseDocument.description) ? (
+  entities.leaveCaseDocument.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.leaveCaseDocument.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.leaveCaseDocument.supportedTypes} />
+
+## Data Granularity
+
+{entities.leaveCaseDocument.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.leaveCaseDocument.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.leaveCaseDocument.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.leaveCaseDocument.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.leaveCaseDocument.relationship}
+  simple={true}
+/>
+
+{entities.leaveCaseDocument.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.leaveCaseDocument.additionalInfo) ? (
+      entities.leaveCaseDocument.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.leaveCaseDocument.additionalInfo}</p>
+    )}
+
+  </>
+)}

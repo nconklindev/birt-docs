@@ -1,0 +1,63 @@
+---
+title: Scheduled Shift Segment S&C Profile
+description: The Data Dictionary entry for the Scheduled Shift Segment S&C Profile entity
+slug: /data-dictionary/scheduled-shift-segment-sc-profile
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Scheduled Shift Segment S&C Profile
+
+{/* prettier-ignore */}
+{Array.isArray(entities.scheduledShiftSegmentScProfile.description) ? (
+  entities.scheduledShiftSegmentScProfile.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.scheduledShiftSegmentScProfile.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.scheduledShiftSegmentScProfile.supportedTypes} />
+
+## Data Granularity
+
+{entities.scheduledShiftSegmentScProfile.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.scheduledShiftSegmentScProfile.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.scheduledShiftSegmentScProfile.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.scheduledShiftSegmentScProfile.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.scheduledShiftSegmentScProfile.relationship}
+  simple={true}
+/>
+
+{entities.scheduledShiftSegmentScProfile.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.scheduledShiftSegmentScProfile.additionalInfo) ? (
+      entities.scheduledShiftSegmentScProfile.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.scheduledShiftSegmentScProfile.additionalInfo}</p>
+    )}
+
+  </>
+)}

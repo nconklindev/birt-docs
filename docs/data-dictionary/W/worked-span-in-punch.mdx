@@ -1,0 +1,69 @@
+---
+title: Worked Span In Punch
+description: The Data Dictionary entry for the Worked Span In Punch entity
+slug: /data-dictionary/worked-span-in-punch
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Worked Span In Punch
+
+{/* prettier-ignore */}
+{Array.isArray(entities.workedSpanInPunch.description) ? (
+  entities.workedSpanInPunch.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.workedSpanInPunch.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+:::note
+
+Note: The Worked Span In Punch entity cannot be used with the Worked Span Out Punch entity to view the in- and out- punch pair related to a shift or shift segment. To view the punch pairs, use the Timecard Transactions entity.
+
+:::
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.workedSpanInPunch.supportedTypes} />
+
+## Data Granularity
+
+{entities.workedSpanInPunch.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.workedSpanInPunch.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.workedSpanInPunch.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.workedSpanInPunch.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.workedSpanInPunch.relationship}
+  simple={true}
+/>
+
+{entities.workedSpanInPunch.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.workedSpanInPunch.additionalInfo) ? (
+      entities.workedSpanInPunch.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.workedSpanInPunch.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,68 @@
+---
+title: Work Unit
+description: The Data Dictionary entry for the Work Unit entity
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Work Unit
+
+:::warning
+
+The Healthcare Analytics entities and columns are available only from the API and cannot be used in Dataviews or to create reports at this time. To get the Healthcare Analytics data, use the Retrieve Data (POST /v1/commons/data/multi_read) API operation. Retrieve only the WORKUNIT and WORKUNIT_TIMESERIES data and ignore the Employee and Location data.
+
+:::
+
+{/* prettier-ignore */}
+{Array.isArray(entities.workUnit.description) ? (
+  entities.workUnit.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.workUnit.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.workUnit.supportedTypes} />
+
+## Data Granularity
+
+{entities.workUnit.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.workUnit.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.workUnit.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.workUnit.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.workUnit.relationship}
+  simple={true}
+/>
+
+{entities.workUnit.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.workUnit.additionalInfo) ? (
+      entities.workUnit.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.workUnit.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,63 @@
+---
+title: Projected Paycode Totals (Exclude Corrections)
+description: The Data Dictionary entry for the Projected Paycode Totals (Exclude Corrections) entity
+slug: /data-dictionary/projected-paycode-totals-exclude-corrections
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Projected Paycode Totals (Exclude Corrections)
+
+{/* prettier-ignore */}
+{Array.isArray(entities.projectedPaycodeTotalsExcludeCorrections.description) ? (
+  entities.projectedPaycodeTotalsExcludeCorrections.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.projectedPaycodeTotalsExcludeCorrections.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.projectedPaycodeTotalsExcludeCorrections.supportedTypes} />
+
+## Data Granularity
+
+{entities.projectedPaycodeTotalsExcludeCorrections.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.projectedPaycodeTotalsExcludeCorrections.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.projectedPaycodeTotalsExcludeCorrections.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.projectedPaycodeTotalsExcludeCorrections.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.projectedPaycodeTotalsExcludeCorrections.relationship}
+  simple={true}
+/>
+
+{entities.projectedPaycodeTotalsExcludeCorrections.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.projectedPaycodeTotalsExcludeCorrections.additionalInfo) ? (
+      entities.projectedPaycodeTotalsExcludeCorrections.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.projectedPaycodeTotalsExcludeCorrections.additionalInfo}</p>
+    )}
+
+  </>
+)}

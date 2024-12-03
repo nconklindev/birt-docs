@@ -1,0 +1,67 @@
+---
+title: Coverage - Scheduled Count
+description: The Data Dictionary entry for the Coverage - Scheduled Count entity
+slug: /data-dictionary/coverage-scheduled-count
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Coverage - Scheduled Count
+
+{/* prettier-ignore */}
+{Array.isArray(entities.coverageScheduledCount.description) ? (
+  entities.coverageScheduledCount.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.coverageScheduledCount.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.coverageScheduledCount.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.coverageScheduledCount.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.coverageScheduledCount.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.coverageScheduledCount.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.coverageScheduledCount.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.coverageScheduledCount.relationship}
+  simple={true}
+/>
+
+{entities.coverageScheduledCount.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.coverageScheduledCount.additionalInfo) ? (
+      entities.coverageScheduledCount.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.coverageScheduledCount.additionalInfo}</p>
+    )}
+
+  </>
+)}

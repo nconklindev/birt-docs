@@ -1,0 +1,63 @@
+---
+title: Leave Taking
+description: The Data Dictionary entry for the Leave Taking entity
+slug: /data-dictionary/leave-taking
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Leave Taking
+
+{/* prettier-ignore */}
+{Array.isArray(entities.leaveTaking.description) ? (
+  entities.leaveTaking.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.leaveTaking.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.leaveTaking.supportedTypes} />
+
+## Data Granularity
+
+{entities.leaveTaking.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.leaveTaking.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.leaveTaking.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.leaveTaking.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.leaveTaking.relationship}
+  simple={true}
+/>
+
+{entities.leaveTaking.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.leaveTaking.additionalInfo) ? (
+      entities.leaveTaking.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.leaveTaking.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,63 @@
+---
+title: Pay Rule Assignment History
+description: The Data Dictionary entry for the Pay Rule Assignment History entity
+slug: /data-dictionary/pay-rule-assignment-history
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Pay Rule Assignment History
+
+{/* prettier-ignore */}
+{Array.isArray(entities.payRuleAssignmentHistory.description) ? (
+  entities.payRuleAssignmentHistory.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.payRuleAssignmentHistory.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.payRuleAssignmentHistory.supportedTypes} />
+
+## Data Granularity
+
+{entities.payRuleAssignmentHistory.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.payRuleAssignmentHistory.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.payRuleAssignmentHistory.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.payRuleAssignmentHistory.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.payRuleAssignmentHistory.relationship}
+  simple={true}
+/>
+
+{entities.payRuleAssignmentHistory.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.payRuleAssignmentHistory.additionalInfo) ? (
+      entities.payRuleAssignmentHistory.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.payRuleAssignmentHistory.additionalInfo}</p>
+    )}
+
+  </>
+)}

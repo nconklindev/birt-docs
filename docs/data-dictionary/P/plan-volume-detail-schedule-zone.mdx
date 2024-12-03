@@ -1,0 +1,63 @@
+---
+title: Plan Volume Detail - Schedule Zone
+description: The Data Dictionary entry for the Plan Volume Detail - Schedule Zone entity
+slug: /data-dictionary/plan-volume-detail-schedule-zone
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Plan Volume Detail - Schedule Zone
+
+{/* prettier-ignore */}
+{Array.isArray(entities.planVolumeDetailScheduleZone.description) ? (
+  entities.planVolumeDetailScheduleZone.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.planVolumeDetailScheduleZone.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.planVolumeDetailScheduleZone.supportedTypes} />
+
+## Data Granularity
+
+{entities.planVolumeDetailScheduleZone.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.planVolumeDetailScheduleZone.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.planVolumeDetailScheduleZone.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.planVolumeDetailScheduleZone.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.planVolumeDetailScheduleZone.relationship}
+  simple={true}
+/>
+
+{entities.planVolumeDetailScheduleZone.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.planVolumeDetailScheduleZone.additionalInfo) ? (
+      entities.planVolumeDetailScheduleZone.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.planVolumeDetailScheduleZone.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,67 @@
+---
+title: Day
+description: The Data Dictionary entry for the Day entity
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Day
+
+:::warning
+
+The Healthcare Analytics entities and columns are available only from the API and cannot be used in Dataviews or to create reports at this time. To get the Healthcare Analytics data, use the Retrieve Data (POST /v1/commons/data/multi_read) API operation. Retrieve only the WORKUNIT and WORKUNIT_TIMESERIES data and ignore the Employee and Location data.
+
+:::
+
+{/* prettier-ignore */}
+{Array.isArray(entities.day.description) ? (
+  entities.day.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.day.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.day.supportedTypes} />
+
+## Data Granularity
+
+{entities.day.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.day.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.day.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.day.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.day.relationship}
+/>
+
+{entities.day.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.day.additionalInfo) ? (
+      entities.day.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.day.additionalInfo}</p>
+    )}
+
+  </>
+)}

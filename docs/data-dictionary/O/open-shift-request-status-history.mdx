@@ -1,0 +1,63 @@
+---
+title: Open Shift Request Status History
+description: The Data Dictionary entry for the Open Shift Request Status History entity
+slug: /data-dictionary/open-shift-request-status-history
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Open Shift Request Status History
+
+{/* prettier-ignore */}
+{Array.isArray(entities.openShiftRequestStatusHistory.description) ? (
+  entities.openShiftRequestStatusHistory.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.openShiftRequestStatusHistory.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.openShiftRequestStatusHistory.supportedTypes} />
+
+## Data Granularity
+
+{entities.openShiftRequestStatusHistory.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.openShiftRequestStatusHistory.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.openShiftRequestStatusHistory.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.openShiftRequestStatusHistory.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.openShiftRequestStatusHistory.relationship}
+  simple={true}
+/>
+
+{entities.openShiftRequestStatusHistory.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.openShiftRequestStatusHistory.additionalInfo) ? (
+      entities.openShiftRequestStatusHistory.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.openShiftRequestStatusHistory.additionalInfo}</p>
+    )}
+
+  </>
+)}

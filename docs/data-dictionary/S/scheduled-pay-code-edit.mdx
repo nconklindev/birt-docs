@@ -1,0 +1,63 @@
+---
+title: Scheduled Paycode Edit
+description: The Data Dictionary entry for the Scheduled Paycode Edit entity
+slug: /data-dictionary/scheduled-paycode-edit
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Scheduled Paycode Edit
+
+{/* prettier-ignore */}
+{Array.isArray(entities.scheduledPaycodeEdit.description) ? (
+  entities.scheduledPaycodeEdit.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.scheduledPaycodeEdit.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.scheduledPaycodeEdit.supportedTypes} />
+
+## Data Granularity
+
+{entities.scheduledPaycodeEdit.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.scheduledPaycodeEdit.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.scheduledPaycodeEdit.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.scheduledPaycodeEdit.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.scheduledPaycodeEdit.relationship}
+  simple={true}
+/>
+
+{entities.scheduledPaycodeEdit.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.scheduledPaycodeEdit.additionalInfo) ? (
+      entities.scheduledPaycodeEdit.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.scheduledPaycodeEdit.additionalInfo}</p>
+    )}
+
+  </>
+)}

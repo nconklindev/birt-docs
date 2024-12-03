@@ -1,0 +1,63 @@
+---
+title: Workload - Planned Count
+description: The Data Dictionary entry for the Workload - Planned Count entity
+slug: /data-dictionary/workload-planned-count
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Workload - Planned Count
+
+{/* prettier-ignore */}
+{Array.isArray(entities.workloadPlannedCount.description) ? (
+  entities.workloadPlannedCount.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.workloadPlannedCount.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.workloadPlannedCount.supportedTypes} />
+
+## Data Granularity
+
+{entities.workloadPlannedCount.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.workloadPlannedCount.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.workloadPlannedCount.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.workloadPlannedCount.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.workloadPlannedCount.relationship}
+  simple={true}
+/>
+
+{entities.workloadPlannedCount.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.workloadPlannedCount.additionalInfo) ? (
+      entities.workloadPlannedCount.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.workloadPlannedCount.additionalInfo}</p>
+    )}
+
+  </>
+)}

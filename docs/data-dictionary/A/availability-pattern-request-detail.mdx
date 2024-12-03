@@ -1,0 +1,69 @@
+---
+title: Availability Pattern Request Detail
+description: The Data Dictionary entry for the Availability Pattern Request Detail entity
+slug: /data-dictionary/availability-pattern-request-detail
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Availability Pattern Request Detail
+
+{/* prettier-ignore */}
+{Array.isArray(entities.availabilityPatternRequestDetail.description) ? (
+  entities.availabilityPatternRequestDetail.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.availabilityPatternRequestDetail.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.availabilityPatternRequestDetail.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.availabilityPatternRequestDetail.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.availabilityPatternRequestDetail.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.availabilityPatternRequestDetail.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.availabilityPatternRequestDetail.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.availabilityPatternRequestDetail.relationship}
+  simple={true}
+/>
+
+{entities.availabilityPatternRequestDetail.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.availabilityPatternRequestDetail.additionalInfo) ? (
+      entities.availabilityPatternRequestDetail.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.availabilityPatternRequestDetail.additionalInfo}</p>
+    )}
+
+  </>
+)}

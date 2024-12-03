@@ -1,0 +1,67 @@
+---
+title: Audit Timekeeping
+description: The Data Dictionary entry for the Audit Timekeeping entity
+slug: /data-dictionary/audit-timekeeping
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Audit Timekeeping
+
+{/* prettier-ignore */}
+{Array.isArray(entities.auditTimekeeping.description) ? (
+  entities.auditTimekeeping.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.auditTimekeeping.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.auditTimekeeping.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.auditTimekeeping.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.auditTimekeeping.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.auditTimekeeping.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.auditTimekeeping.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.auditTimekeeping.relationship}
+  simple={true}
+/>
+
+{entities.auditTimekeeping.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.auditTimekeeping.additionalInfo) ? (
+      entities.auditTimekeeping.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.auditTimekeeping.additionalInfo}</p>
+    )}
+
+  </>
+)}

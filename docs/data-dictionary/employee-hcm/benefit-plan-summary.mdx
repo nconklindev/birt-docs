@@ -1,0 +1,63 @@
+---
+title: Benefit Plan Summary
+description: The Data Dictionary entry for the Benefit Plan Summary entity
+
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Benefit Plan Summary
+
+{/* prettier-ignore */}
+{Array.isArray(entities.employeeHcmBenefitPlanSummary.description) ? (
+  entities.employeeHcmBenefitPlanSummary.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.employeeHcmBenefitPlanSummary.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.employeeHcmBenefitPlanSummary.supportedTypes} />
+
+## Data Granularity
+
+{entities.employeeHcmBenefitPlanSummary.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.employeeHcmBenefitPlanSummary.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.employeeHcmBenefitPlanSummary.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.employeeHcmBenefitPlanSummary.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.employeeHcmBenefitPlanSummary.relationship}
+  simple={true}
+/>
+
+{entities.employeeHcmBenefitPlanSummary.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.employeeHcmBenefitPlanSummary.additionalInfo) ? (
+      entities.employeeHcmBenefitPlanSummary.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.employeeHcmBenefitPlanSummary.additionalInfo}</p>
+    )}
+
+  </>
+)}

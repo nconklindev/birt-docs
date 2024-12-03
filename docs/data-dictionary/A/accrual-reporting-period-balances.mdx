@@ -1,0 +1,64 @@
+---
+title: Accrual Reporting Period Balances
+description: The Data Dictionary entry for the Accrual Reporting Period Balances entity
+slug: /data-dictionary/accrual-reporting-period-balances
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Accrual Reporting Period Balances
+
+{Array.isArray(entities.accrualReportingPeriodBalances.description) ? (
+entities.accrualReportingPeriodBalances.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : (<p>{entities.accrualReportingPeriodBalances.description}</p>
+)}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.accrualReportingPeriodBalances.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.accrualReportingPeriodBalances.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.accrualReportingPeriodBalances.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.accrualReportingPeriodBalances.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.accrualReportingPeriodBalances.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.accrualReportingPeriodBalances.relationship}
+  simple={true}
+/>
+
+{entities.accrualReportingPeriodBalances.additionalInfo && (
+
+<> ## Additional Information
+
+    {Array.isArray(entities.accrualReportingPeriodBalances.additionalInfo) ? (
+      entities.accrualReportingPeriodBalances.additionalInformation.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.accrualReportingPeriodBalances.additionalInfo}</p>
+    )}
+
+</>
+)}

@@ -1,0 +1,67 @@
+---
+title: Hourly Wage Rate History
+description: The Data Dictionary entry for the Hourly Wage Rate History entity
+slug: /data-dictionary/hourly-wage-rate-history
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Hourly Wage Rate History
+
+{/* prettier-ignore */}
+{Array.isArray(entities.hourlyWageRateHistory.description) ? (
+  entities.hourlyWageRateHistory.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.hourlyWageRateHistory.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.hourlyWageRateHistory.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.hourlyWageRateHistory.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.hourlyWageRateHistory.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.hourlyWageRateHistory.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.hourlyWageRateHistory.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.hourlyWageRateHistory.relationship}
+  simple={true}
+/>
+
+{entities.hourlyWageRateHistory.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.hourlyWageRateHistory.additionalInfo) ? (
+      entities.hourlyWageRateHistory.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.hourlyWageRateHistory.additionalInfo}</p>
+    )}
+
+  </>
+)}

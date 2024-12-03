@@ -1,0 +1,69 @@
+---
+title: Budget Volume - Schedule Zone Set
+description: The Data Dictionary entry for the Budget Volume - Schedule Zone Set entity
+slug: /data-dictionary/budget-volume-schedule-zone-set
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Budget Volume - Schedule Zone Set
+
+{/* prettier-ignore */}
+{Array.isArray(entities.budgetVolumeScheduleZoneSet.description) ? (
+  entities.budgetVolumeScheduleZoneSet.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.budgetVolumeScheduleZoneSet.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.budgetVolumeScheduleZoneSet.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.budgetVolumeScheduleZoneSet.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.budgetVolumeScheduleZoneSet.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.budgetVolumeScheduleZoneSet.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.budgetVolumeScheduleZoneSet.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.budgetVolumeScheduleZoneSet.relationship}
+  simple={true}
+/>
+
+{entities.budgetVolumeScheduleZoneSet.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.budgetVolumeScheduleZoneSet.additionalInfo) ? (
+      entities.budgetVolumeScheduleZoneSet.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.budgetVolumeScheduleZoneSet.additionalInfo}</p>
+    )}
+
+  </>
+)}

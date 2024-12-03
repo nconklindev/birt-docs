@@ -1,0 +1,63 @@
+---
+title: Self Schedule Request Status History
+description: The Data Dictionary entry for the Self Schedule Request Status History entity
+slug: /data-dictionary/self-schedule-request-status-history
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Self Schedule Request Status History
+
+{/* prettier-ignore */}
+{Array.isArray(entities.selfScheduleRequestStatusHistory.description) ? (
+  entities.selfScheduleRequestStatusHistory.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.selfScheduleRequestStatusHistory.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.selfScheduleRequestStatusHistory.supportedTypes} />
+
+## Data Granularity
+
+{entities.selfScheduleRequestStatusHistory.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.selfScheduleRequestStatusHistory.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.selfScheduleRequestStatusHistory.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.selfScheduleRequestStatusHistory.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.selfScheduleRequestStatusHistory.relationship}
+  simple={true}
+/>
+
+{entities.selfScheduleRequestStatusHistory.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.selfScheduleRequestStatusHistory.additionalInfo) ? (
+      entities.selfScheduleRequestStatusHistory.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.selfScheduleRequestStatusHistory.additionalInfo}</p>
+    )}
+
+  </>
+)}

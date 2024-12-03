@@ -1,0 +1,67 @@
+---
+title: Exception Counter
+description: The Data Dictionary entry for the Exception Counter entity
+slug: /data-dictionary/exception-counter
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Exception Counter
+
+{/* prettier-ignore */}
+{Array.isArray(entities.exceptionCounter.description) ? (
+  entities.exceptionCounter.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.exceptionCounter.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.exceptionCounter.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.exceptionCounter.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.exceptionCounter.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.exceptionCounter.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.exceptionCounter.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.exceptionCounter.relationship}
+  simple={true}
+/>
+
+{entities.exceptionCounter.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.exceptionCounter.additionalInfo) ? (
+      entities.exceptionCounter.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.exceptionCounter.additionalInfo}</p>
+    )}
+
+  </>
+)}

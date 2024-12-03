@@ -1,0 +1,63 @@
+---
+title: Audit Leave
+description: The Data Dictionary entry for the Audit Leave entity
+slug: /data-dictionary/audit-leave
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Audit Leave
+
+{/* prettier-ignore */}
+{Array.isArray(entities.auditLeave.description) ? (
+  entities.auditLeave.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.auditLeave.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.auditLeave.supportedTypes} />
+
+## Data Granularity
+
+{entities.auditLeave.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.auditLeave.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.auditLeave.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.auditLeave.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.auditLeave.relationship}
+  simple={true}
+/>
+
+{entities.auditLeave.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.auditLeave.additionalInfo) ? (
+      entities.auditLeave.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.auditLeave.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,59 @@
+---
+title: Activity Team
+description: The Data Dictionary entry for the Activity Team entity
+slug: /data-dictionary/activity-team
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Activity Team
+
+{Array.isArray(entities.activityTeam.description) ? (
+entities.activityTeam.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : (<p>{entities.activityTeam.description}</p>
+)}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.activityTeam.supportedTypes} />
+
+## Data Granularity
+
+{entities.activityTeam.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.activityTeam.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.activityTeam.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.activityTeam.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.activityTeam.relationship}
+  simple={true}
+/>
+
+{entities.activityTeam.additionalInfo && (
+
+  <>
+    ## Additional Information
+
+    {Array.isArray(entities.activityTeam.additionalInfo) ? (
+      entities.activityTeam.additionalInformation.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.activityTeam.additionalInfo}</p>
+    )}
+
+  </>
+)}

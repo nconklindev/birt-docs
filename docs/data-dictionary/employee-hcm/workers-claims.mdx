@@ -1,0 +1,62 @@
+---
+title: Worker's Claims
+description: The Data Dictionary entry for the Worker's Claims entity
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Worker's Claims
+
+{/* prettier-ignore */}
+{Array.isArray(entities.employeeHcmWorkersClaims.description) ? (
+  entities.employeeHcmWorkersClaims.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.employeeHcmWorkersClaims.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.employeeHcmWorkersClaims.supportedTypes} />
+
+## Data Granularity
+
+{entities.employeeHcmWorkersClaims.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.employeeHcmWorkersClaims.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.employeeHcmWorkersClaims.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.employeeHcmWorkersClaims.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.employeeHcmWorkersClaims.relationship}
+  simple={true}
+/>
+
+{entities.employeeHcmWorkersClaims.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.employeeHcmWorkersClaims.additionalInfo) ? (
+      entities.employeeHcmWorkersClaims.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.employeeHcmWorkersClaims.additionalInfo}</p>
+    )}
+
+  </>
+)}

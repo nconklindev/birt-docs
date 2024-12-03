@@ -1,0 +1,63 @@
+---
+title: Actual & Schedule Shift Times
+description: The Data Dictionary entry for the Actual & Schedule Shift Times entity
+slug: /data-dictionary/actual-and-schedule-shift-times
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Actual & Schedule Shift Times
+
+{Array.isArray(entities.actualScheduleShiftTimes.description) ? (
+entities.actualScheduleShiftTimes.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : (<p>{entities.actualScheduleShiftTimes.description}</p>
+)}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.actualScheduleShiftTimes.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.actualScheduleShiftTimes.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.actualScheduleShiftTimes.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.actualScheduleShiftTimes.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.actualScheduleShiftTimes.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.actualScheduleShiftTimes.relationship}
+  simple={true}
+/>
+
+{entities.actualScheduleShiftTimes.additionalInfo && (
+
+  <>
+    ## Additional Information
+
+    {Array.isArray(entities.actualScheduleShiftTimes.additionalInfo) ? (
+      entities.actualScheduleShiftTimes.additionalInformation.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.actualScheduleShiftTimes.additionalInfo}</p>
+    )}
+
+  </>
+)}

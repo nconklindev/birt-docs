@@ -1,0 +1,63 @@
+---
+title: Projected Paycode Totals (Corrections Only)
+description: The Data Dictionary entry for the Projected Paycode Totals (Corrections Only) entity
+slug: /data-dictionary/projected-paycode-totals-corrections-only
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Projected Paycode Totals (Corrections Only)
+
+{/* prettier-ignore */}
+{Array.isArray(entities.projectedPaycodeTotalsCorrectionsOnly.description) ? (
+  entities.projectedPaycodeTotalsCorrectionsOnly.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.projectedPaycodeTotalsCorrectionsOnly.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.projectedPaycodeTotalsCorrectionsOnly.supportedTypes} />
+
+## Data Granularity
+
+{entities.projectedPaycodeTotalsCorrectionsOnly.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.projectedPaycodeTotalsCorrectionsOnly.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.projectedPaycodeTotalsCorrectionsOnly.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.projectedPaycodeTotalsCorrectionsOnly.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.projectedPaycodeTotalsCorrectionsOnly.relationship}
+  simple={true}
+/>
+
+{entities.projectedPaycodeTotalsCorrectionsOnly.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.projectedPaycodeTotalsCorrectionsOnly.additionalInfo) ? (
+      entities.projectedPaycodeTotalsCorrectionsOnly.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.projectedPaycodeTotalsCorrectionsOnly.additionalInfo}</p>
+    )}
+
+  </>
+)}

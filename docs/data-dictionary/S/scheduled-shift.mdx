@@ -1,0 +1,63 @@
+---
+title: Scheduled Shift
+description: The Data Dictionary entry for the Scheduled Shift entity
+slug: /data-dictionary/scheduled-shift
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Scheduled Shift
+
+{/* prettier-ignore */}
+{Array.isArray(entities.scheduledShift.description) ? (
+  entities.scheduledShift.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.scheduledShift.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.scheduledShift.supportedTypes} />
+
+## Data Granularity
+
+{entities.scheduledShift.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.scheduledShift.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.scheduledShift.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.scheduledShift.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.scheduledShift.relationship}
+  simple={true}
+/>
+
+{entities.scheduledShift.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.scheduledShift.additionalInfo) ? (
+      entities.scheduledShift.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.scheduledShift.additionalInfo}</p>
+    )}
+
+  </>
+)}

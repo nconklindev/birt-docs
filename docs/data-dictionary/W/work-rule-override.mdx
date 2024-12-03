@@ -1,0 +1,63 @@
+---
+title: Work Rule Override
+description: The Data Dictionary entry for the Work Rule Override entity
+slug: /data-dictionary/work-rule-override
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Work Rule Override
+
+{/* prettier-ignore */}
+{Array.isArray(entities.workRuleOverride.description) ? (
+  entities.workRuleOverride.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.workRuleOverride.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.workRuleOverride.supportedTypes} />
+
+## Data Granularity
+
+{entities.workRuleOverride.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.workRuleOverride.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.workRuleOverride.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.workRuleOverride.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.workRuleOverride.relationship}
+  simple={true}
+/>
+
+{entities.workRuleOverride.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.workRuleOverride.additionalInfo) ? (
+      entities.workRuleOverride.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.workRuleOverride.additionalInfo}</p>
+    )}
+
+  </>
+)}

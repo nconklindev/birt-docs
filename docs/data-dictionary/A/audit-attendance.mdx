@@ -1,0 +1,65 @@
+---
+title: Audit Attendance
+description: The Data Dictionary entry for the Audit Attendance entity
+slug: /data-dictionary/audit-attendance
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Audit Attendance
+
+{/* prettier-ignore */}
+{Array.isArray(entities.auditAttendance.description) ? (
+  entities.auditAttendance.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.auditAttendance.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.auditAttendance.supportedTypes} />
+
+## Data Granularity
+
+{entities.auditAttendance.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.auditAttendance.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.auditAttendance.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.auditAttendance.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.auditAttendance.relationship}
+  simple={true}
+/>
+
+{entities.auditAttendance.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.auditAttendance.additionalInfo) ? (
+      entities.auditAttendance.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.auditAttendance.additionalInfo}</p>
+    )}
+
+  </>
+)}

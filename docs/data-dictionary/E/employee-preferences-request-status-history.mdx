@@ -1,0 +1,75 @@
+---
+title: Employee Preferences Request Status History
+description: The Data Dictionary entry for the Employee Preferences Request Status History entity
+slug: /data-dictionary/employee-preferences-request-status-history
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Employee Preferences Request Status History
+
+{/* prettier-ignore */}
+{Array.isArray(entities.employeePreferencesRequestStatusHistory.description) ? (
+  entities.employeePreferencesRequestStatusHistory.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.employeePreferencesRequestStatusHistory.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={
+    entities.employeePreferencesRequestStatusHistory.supportedTypes
+  }
+/>
+
+## Data Granularity
+
+{entities.employeePreferencesRequestStatusHistory.dataGranularity}
+
+## Columns
+
+<ColumnsTable
+  columns={entities.employeePreferencesRequestStatusHistory.columns}
+/>
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={
+    entities.employeePreferencesRequestStatusHistory.relatedEntities
+  }
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.employeePreferencesRequestStatusHistory.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.employeePreferencesRequestStatusHistory.relationship}
+  simple={true}
+/>
+
+{entities.employeePreferencesRequestStatusHistory.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.employeePreferencesRequestStatusHistory.additionalInfo) ? (
+      entities.employeePreferencesRequestStatusHistory.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.employeePreferencesRequestStatusHistory.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,63 @@
+---
+title: Schedule Tag
+description: The Data Dictionary entry for the Schedule Tag entity
+slug: /data-dictionary/schedule-tag
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Schedule Tag
+
+{/* prettier-ignore */}
+{Array.isArray(entities.scheduleTag.description) ? (
+  entities.scheduleTag.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.scheduleTag.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.scheduleTag.supportedTypes} />
+
+## Data Granularity
+
+{entities.scheduleTag.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.scheduleTag.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.scheduleTag.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.scheduleTag.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.scheduleTag.relationship}
+  simple={true}
+/>
+
+{entities.scheduleTag.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.scheduleTag.additionalInfo) ? (
+      entities.scheduleTag.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.scheduleTag.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,63 @@
+---
+title: Schedule Zone Set
+description: The Data Dictionary entry for the Schedule Zone Set entity
+slug: /data-dictionary/schedule-zone-set
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Schedule Zone Set
+
+{/* prettier-ignore */}
+{Array.isArray(entities.scheduleZoneSet.description) ? (
+  entities.scheduleZoneSet.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.scheduleZoneSet.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.scheduleZoneSet.supportedTypes} />
+
+## Data Granularity
+
+{entities.scheduleZoneSet.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.scheduleZoneSet.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.scheduleZoneSet.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.scheduleZoneSet.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.scheduleZoneSet.relationship}
+  simple={true}
+/>
+
+{entities.scheduleZoneSet.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.scheduleZoneSet.additionalInfo) ? (
+      entities.scheduleZoneSet.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.scheduleZoneSet.additionalInfo}</p>
+    )}
+
+  </>
+)}

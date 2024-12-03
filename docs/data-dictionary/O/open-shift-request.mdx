@@ -1,0 +1,63 @@
+---
+title: Open Shift Request
+description: The Data Dictionary entry for the Open Shift Request entity
+slug: /data-dictionary/open-shift-request
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Open Shift Request
+
+{/* prettier-ignore */}
+{Array.isArray(entities.openShiftRequest.description) ? (
+  entities.openShiftRequest.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.openShiftRequest.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.openShiftRequest.supportedTypes} />
+
+## Data Granularity
+
+{entities.openShiftRequest.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.openShiftRequest.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.openShiftRequest.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.openShiftRequest.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.openShiftRequest.relationship}
+  simple={true}
+/>
+
+{entities.openShiftRequest.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.openShiftRequest.additionalInfo) ? (
+      entities.openShiftRequest.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.openShiftRequest.additionalInfo}</p>
+    )}
+
+  </>
+)}

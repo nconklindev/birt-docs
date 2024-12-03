@@ -1,0 +1,63 @@
+---
+title: Plan Volume Detail
+description: The Data Dictionary entry for the Plan Volume Detail entity
+slug: /data-dictionary/plan-volume-detail
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Plan Volume Detail
+
+{/* prettier-ignore */}
+{Array.isArray(entities.planVolumeDetail.description) ? (
+  entities.planVolumeDetail.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.planVolumeDetail.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.planVolumeDetail.supportedTypes} />
+
+## Data Granularity
+
+{entities.planVolumeDetail.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.planVolumeDetail.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.planVolumeDetail.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.planVolumeDetail.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.planVolumeDetail.relationship}
+  simple={true}
+/>
+
+{entities.planVolumeDetail.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.planVolumeDetail.additionalInfo) ? (
+      entities.planVolumeDetail.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.planVolumeDetail.additionalInfo}</p>
+    )}
+
+  </>
+)}

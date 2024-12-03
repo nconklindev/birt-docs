@@ -1,0 +1,66 @@
+---
+title: Actual Totals (Include Corrections)
+description: The Data Dictionary entry for the Actual Totals (Include Corrections) entity
+slug: /data-dictionary/actual-totals-include-corrections
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Actual Totals (Include Corrections)
+
+{Array.isArray(entities.actualTotalsIncludeCorrections.description) ? (
+entities.actualTotalsIncludeCorrections.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : ( entities.actualTotalsIncludeCorrections.description.split('\n').map((paragraph,
+index) => (<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.actualTotalsIncludeCorrections.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.actualTotalsIncludeCorrections.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.actualTotalsIncludeCorrections.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.actualTotalsIncludeCorrections.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.actualTotalsIncludeCorrections.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.actualTotalsIncludeCorrections.relationship}
+  simple={true}
+/>
+
+{entities.actualTotalsIncludeCorrections.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.actualTotalsIncludeCorrections.additionalInfo) ? (
+      entities.actualTotalsIncludeCorrections.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.actualTotalsIncludeCorrections.additionalInfo}</p>
+    )}
+
+  </>
+)}

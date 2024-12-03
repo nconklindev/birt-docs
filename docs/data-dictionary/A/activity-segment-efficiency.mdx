@@ -1,0 +1,62 @@
+---
+title: Activity Segment Efficiency
+description: The Data Dictionary entry for the Activity Segment Efficiency entity
+slug: /data-dictionary/activity-segment-efficiency
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Activity Segment Efficiency
+
+{Array.isArray(entities.activitySegmentEfficiency.description) ? (
+entities.activitySegmentEfficiency.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : (<p>{entities.activitySegmentEfficiency.description}</p>
+)}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.activitySegmentEfficiency.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.activitySegmentEfficiency.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.activitySegmentEfficiency.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.activitySegmentEfficiency.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.activitySegmentEfficiency.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.activitySegmentEfficiency.relationship}
+/>
+
+{entities.activitySegmentEfficiency.additionalInfo && (
+
+  <>
+    ## Additional Information
+
+    {Array.isArray(entities.activitySegmentEfficiency.additionalInfo) ? (
+      entities.activitySegmentEfficiency.additionalInformation.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.activitySegmentEfficiency.additionalInfo}</p>
+    )}
+
+  </>
+)}

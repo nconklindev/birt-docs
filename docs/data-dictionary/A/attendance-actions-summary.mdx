@@ -1,0 +1,64 @@
+---
+title: Attendance Actions Summary
+description: The Data Dictionary entry for the Attendance Actions Summary entity
+slug: /data-dictionary/attendance-actions-summary
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Attendance Actions Summary
+
+{Array.isArray(entities.attendanceActionsSummary.description) ? (
+entities.attendanceActionsSummary.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : ( entities.attendanceActionsSummary.description.split('\n').map((paragraph,
+index) => (<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.attendanceActionsSummary.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.attendanceActionsSummary.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.attendanceActionsSummary.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.attendanceActionsSummary.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.attendanceActionsSummary.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.attendanceActionsSummary.relationship}
+  simple={true}
+/>
+
+{entities.attendanceActionsSummary.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.attendanceActionsSummary.additionalInfo) ? (
+      entities.attendanceActionsSummary.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.attendanceActionsSummary.additionalInfo}</p>
+    )}
+
+  </>
+)}

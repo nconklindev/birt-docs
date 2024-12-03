@@ -1,0 +1,63 @@
+---
+title: Delegation
+description: The Data Dictionary entry for the Delegation entity
+slug: /data-dictionary/delegation
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Delegation
+
+{/* prettier-ignore */}
+{Array.isArray(entities.delegation.description) ? (
+  entities.delegation.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.delegation.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.delegation.supportedTypes} />
+
+## Data Granularity
+
+{entities.delegation.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.delegation.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.delegation.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.delegation.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.delegation.relationship}
+  simple={true}
+/>
+
+{entities.delegation.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.delegation.additionalInfo) ? (
+      entities.delegation.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.delegation.additionalInfo}</p>
+    )}
+
+  </>
+)}

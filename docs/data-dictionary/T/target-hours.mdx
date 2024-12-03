@@ -1,0 +1,63 @@
+---
+title: Target Hours
+description: The Data Dictionary entry for the Target Hours entity
+slug: /data-dictionary/target-hours
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Target Hours
+
+{/* prettier-ignore */}
+{Array.isArray(entities.targetHours.description) ? (
+  entities.targetHours.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.targetHours.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.targetHours.supportedTypes} />
+
+## Data Granularity
+
+{entities.targetHours.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.targetHours.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.targetHours.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.targetHours.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.targetHours.relationship}
+  simple={true}
+/>
+
+{entities.targetHours.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.targetHours.additionalInfo) ? (
+      entities.targetHours.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.targetHours.additionalInfo}</p>
+    )}
+
+  </>
+)}

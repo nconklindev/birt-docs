@@ -1,0 +1,66 @@
+---
+title: Actual Volume Detail - Standard Shift
+description: The Data Dictionary entry for the Actual Volume Detail - Standard Shift entity
+slug: /data-dictionary/actual-volume-detail-standard-shift
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Actual Volume Detail - Standard Shift
+
+{Array.isArray(entities.actualVolumeDetailStandardShift.description) ? (
+entities.actualVolumeDetailStandardShift.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : ( entities.actualVolumeDetailStandardShift.description.split('\n').map((paragraph,
+index) => (<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.actualVolumeDetailStandardShift.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.actualVolumeDetailStandardShift.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.actualVolumeDetailStandardShift.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.actualVolumeDetailStandardShift.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.actualVolumeDetailStandardShift.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.actualVolumeDetailStandardShift.relationship}
+  simple={true}
+/>
+
+{entities.actualVolumeDetailStandardShift.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.actualVolumeDetailStandardShift.additionalInfo) ? (
+      entities.actualVolumeDetailStandardShift.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.actualVolumeDetailStandardShift.additionalInfo}</p>
+    )}
+
+  </>
+)}

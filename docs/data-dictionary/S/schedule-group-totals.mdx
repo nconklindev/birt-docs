@@ -1,0 +1,63 @@
+---
+title: Schedule Group Totals
+description: The Data Dictionary entry for the Schedule Group Totals entity
+slug: /data-dictionary/schedule-group-totals
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Schedule Group Totals
+
+{/* prettier-ignore */}
+{Array.isArray(entities.scheduleGroupTotals.description) ? (
+  entities.scheduleGroupTotals.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.scheduleGroupTotals.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.scheduleGroupTotals.supportedTypes} />
+
+## Data Granularity
+
+{entities.scheduleGroupTotals.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.scheduleGroupTotals.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.scheduleGroupTotals.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.scheduleGroupTotals.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.scheduleGroupTotals.relationship}
+  simple={true}
+/>
+
+{entities.scheduleGroupTotals.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.scheduleGroupTotals.additionalInfo) ? (
+      entities.scheduleGroupTotals.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.scheduleGroupTotals.additionalInfo}</p>
+    )}
+
+  </>
+)}

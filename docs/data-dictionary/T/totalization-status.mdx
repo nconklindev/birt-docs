@@ -1,0 +1,63 @@
+---
+title: Totalization Status
+description: The Data Dictionary entry for the Totalization Status entity
+slug: /data-dictionary/totalization-status
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Totalization Status
+
+{/* prettier-ignore */}
+{Array.isArray(entities.totalizationStatus.description) ? (
+  entities.totalizationStatus.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.totalizationStatus.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.totalizationStatus.supportedTypes} />
+
+## Data Granularity
+
+{entities.totalizationStatus.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.totalizationStatus.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.totalizationStatus.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.totalizationStatus.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.totalizationStatus.relationship}
+  simple={true}
+/>
+
+{entities.totalizationStatus.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.totalizationStatus.additionalInfo) ? (
+      entities.totalizationStatus.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.totalizationStatus.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,63 @@
+---
+title: Priority Scheduling Engine Audit
+description: The Data Dictionary entry for the Priority Scheduling Engine Audit entity
+slug: /data-dictionary/priority-scheduling-engine-audit
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Priority Scheduling Engine Audit
+
+{/* prettier-ignore */}
+{Array.isArray(entities.prioritySchedulingEngineAudit.description) ? (
+  entities.prioritySchedulingEngineAudit.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.prioritySchedulingEngineAudit.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.prioritySchedulingEngineAudit.supportedTypes} />
+
+## Data Granularity
+
+{entities.prioritySchedulingEngineAudit.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.prioritySchedulingEngineAudit.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.prioritySchedulingEngineAudit.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.prioritySchedulingEngineAudit.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.prioritySchedulingEngineAudit.relationship}
+  simple={true}
+/>
+
+{entities.prioritySchedulingEngineAudit.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.prioritySchedulingEngineAudit.additionalInfo) ? (
+      entities.prioritySchedulingEngineAudit.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.prioritySchedulingEngineAudit.additionalInfo}</p>
+    )}
+
+  </>
+)}

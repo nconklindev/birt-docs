@@ -1,0 +1,67 @@
+---
+title: Attestation Daily Detail
+description: The Data Dictionary entry for the Attestation Daily Detail entity
+slug: /data-dictionary/attestation-daily-detail
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Attestation Daily Detail
+
+{/* prettier-ignore */}
+{Array.isArray(entities.attestationDailyDetail.description) ? (
+  entities.attestationDailyDetail.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.attestationDailyDetail.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.attestationDailyDetail.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.attestationDailyDetail.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.attestationDailyDetail.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.attestationDailyDetail.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.attestationDailyDetail.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.attestationDailyDetail.relationship}
+  simple={true}
+/>
+
+{entities.attestationDailyDetail.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.attestationDailyDetail.additionalInfo) ? (
+      entities.attestationDailyDetail.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.attestationDailyDetail.additionalInfo}</p>
+    )}
+
+  </>
+)}

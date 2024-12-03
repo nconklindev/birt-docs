@@ -1,0 +1,66 @@
+---
+title: Actual Volume Schedule Zone Set
+description: The Data Dictionary entry for the Actual Volume Schedule Zone Set entity
+slug: /data-dictionary/actualVolumeScheduleZoneSet
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Actual Volume Schedule Zone Set
+
+{Array.isArray(entities.actualVolumeScheduleZoneSet.description) ? (
+entities.actualVolumeScheduleZoneSet.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : ( entities.actualVolumeScheduleZoneSet.description.split('\n').map((paragraph,
+index) => (<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.actualVolumeScheduleZoneSet.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.actualVolumeScheduleZoneSet.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.actualVolumeScheduleZoneSet.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.actualVolumeScheduleZoneSet.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.actualVolumeScheduleZoneSet.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.actualVolumeScheduleZoneSet.relationship}
+  simple={true}
+/>
+
+{entities.actualVolumeScheduleZoneSet.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.actualVolumeScheduleZoneSet.additionalInfo) ? (
+      entities.actualVolumeScheduleZoneSet.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.actualVolumeScheduleZoneSet.additionalInfo}</p>
+    )}
+
+  </>
+)}

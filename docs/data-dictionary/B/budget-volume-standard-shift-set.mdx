@@ -1,0 +1,69 @@
+---
+title: Budget Volume - Standard Shift Set
+description: The Data Dictionary entry for the Budget Volume - Standard Shift Set entity
+slug: /data-dictionary/budget-volume-standard-shift-set
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Budget Volume - Standard Shift Set
+
+{/* prettier-ignore */}
+{Array.isArray(entities.budgetVolumeStandardShiftSet.description) ? (
+  entities.budgetVolumeStandardShiftSet.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.budgetVolumeStandardShiftSet.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.budgetVolumeStandardShiftSet.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.budgetVolumeStandardShiftSet.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.budgetVolumeStandardShiftSet.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.budgetVolumeStandardShiftSet.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.budgetVolumeStandardShiftSet.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.budgetVolumeStandardShiftSet.relationship}
+  simple={true}
+/>
+
+{entities.budgetVolumeStandardShiftSet.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.budgetVolumeStandardShiftSet.additionalInfo) ? (
+      entities.budgetVolumeStandardShiftSet.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.budgetVolumeStandardShiftSet.additionalInfo}</p>
+    )}
+
+  </>
+)}

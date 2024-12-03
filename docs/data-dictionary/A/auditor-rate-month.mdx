@@ -1,0 +1,67 @@
+---
+title: Auditor Rate - Month
+description: The Data Dictionary entry for the Auditor Rate - Month entity
+slug: /data-dictionary/auditor-rate-month
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Auditor Rate - Month
+
+{/* prettier-ignore */}
+{Array.isArray(entities.auditorRateMonth.description) ? (
+  entities.auditorRateMonth.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.auditorRateMonth.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.auditorRateMonth.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.auditorRateMonth.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.auditorRateMonth.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.auditorRateMonth.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.auditorRateMonth.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.auditorRateMonth.relationship}
+  simple={true}
+/>
+
+{entities.auditorRateMonth.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.auditorRateMonth.additionalInfo) ? (
+      entities.auditorRateMonth.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.auditorRateMonth.additionalInfo}</p>
+    )}
+
+  </>
+)}

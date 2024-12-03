@@ -1,0 +1,60 @@
+---
+title: Activity Results Audit
+description: The Data Dictionary entry for the ACtivity Results Audit entity
+slug: /data-dictionary/activity-results-audit
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Activity Results Audit
+
+{Array.isArray(entities.activityResultsAudit.description) ? (
+entities.activityResultsAudit.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : (<p>{entities.activityResultsAudit.description}</p>
+)}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.activityResultsAudit.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.activityResultsAudit.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.activityResultsAudit.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.activityResultsAudit.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.activityResultsAudit.coreEntity} />
+
+## Relationship
+
+<RelationshipTable relationship={entities.activityResultsAudit.relationship} />
+
+{entities.activityResultsAudit.additionalInfo && (
+
+  <>
+    ## Additional Information
+
+    {Array.isArray(entities.activityResultsAudit.additionalInfo) ? (
+      entities.activityResultsAudit.additionalInformation.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.activityResultsAudit.additionalInfo}</p>
+    )}
+
+  </>
+)}

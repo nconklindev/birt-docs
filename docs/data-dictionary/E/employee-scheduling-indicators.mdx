@@ -1,0 +1,69 @@
+---
+title: Employee Scheduling Indicators
+description: The Data Dictionary entry for the Employee Scheduling Indicators entity
+slug: /data-dictionary/employee-scheduling-indicators
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Employee Scheduling Indicators
+
+{/* prettier-ignore */}
+{Array.isArray(entities.employeeSchedulingIndicators.description) ? (
+  entities.employeeSchedulingIndicators.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.employeeSchedulingIndicators.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.employeeSchedulingIndicators.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.employeeSchedulingIndicators.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.employeeSchedulingIndicators.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.employeeSchedulingIndicators.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable
+  coreEntities={entities.employeeSchedulingIndicators.coreEntity}
+/>
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.employeeSchedulingIndicators.relationship}
+  simple={true}
+/>
+
+{entities.employeeSchedulingIndicators.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.employeeSchedulingIndicators.additionalInfo) ? (
+      entities.employeeSchedulingIndicators.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.employeeSchedulingIndicators.additionalInfo}</p>
+    )}
+
+  </>
+)}

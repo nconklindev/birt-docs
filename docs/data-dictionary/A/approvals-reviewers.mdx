@@ -1,0 +1,66 @@
+---
+title: Approvals Reviewers
+description: The Data Dictionary entry for the Approvals Reviewers entity
+slug: /data-dictionary/approvals-reviewers
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Approvals Reviewers
+
+{Array.isArray(entities.approvalsReviewers.description) ? (
+entities.approvalsReviewers.description.map((paragraph, index) => (
+<p key={index}>{paragraph}</p>
+))
+) : (
+entities.approvalsReviewers.description.split('\n').map((paragraph, index) => (
+<p key={index}>{paragraph}</p>
+))
+)}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.approvalsReviewers.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.approvalsReviewers.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.approvalsReviewers.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.approvalsReviewers.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.approvalsReviewers.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.approvalsReviewers.relationship}
+  simple={true}
+/>
+
+{entities.approvalsReviewers.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.approvalsReviewers.additionalInfo) ? (
+      entities.approvalsReviewers.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.approvalsReviewers.additionalInfo}</p>
+    )}
+
+  </>
+)}

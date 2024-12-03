@@ -1,0 +1,63 @@
+---
+title: Audit Schedule
+description: The Data Dictionary entry for the Audit Schedule entity
+slug: /data-dictionary/audit-schedule
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Audit Schedule
+
+{/* prettier-ignore */}
+{Array.isArray(entities.auditSchedule.description) ? (
+entities.auditSchedule.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : ( entities.auditSchedule.description.split('\n').map((paragraph, index) =>
+(
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.auditSchedule.supportedTypes} />
+
+## Data Granularity
+
+{entities.auditSchedule.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.auditSchedule.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.auditSchedule.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.auditSchedule.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.auditSchedule.relationship}
+  simple={true}
+/>
+
+{entities.auditSchedule.additionalInfo && (
+
+<>
+<h2>Additional Information</h2>
+
+    {Array.isArray(entities.auditSchedule.additionalInfo) ? (
+      entities.auditSchedule.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.auditSchedule.additionalInfo}</p>
+    )}
+
+</>
+)}

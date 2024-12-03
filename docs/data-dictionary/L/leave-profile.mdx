@@ -1,0 +1,63 @@
+---
+title: Leave Profile
+description: The Data Dictionary entry for the Leave Profile entity
+slug: /data-dictionary/leave-profile
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Leave Profile
+
+{/* prettier-ignore */}
+{Array.isArray(entities.leaveProfile.description) ? (
+  entities.leaveProfile.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.leaveProfile.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.leaveProfile.supportedTypes} />
+
+## Data Granularity
+
+{entities.leaveProfile.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.leaveProfile.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.leaveProfile.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.leaveProfile.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.leaveProfile.relationship}
+  simple={true}
+/>
+
+{entities.leaveProfile.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.leaveProfile.additionalInfo) ? (
+      entities.leaveProfile.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.leaveProfile.additionalInfo}</p>
+    )}
+
+  </>
+)}

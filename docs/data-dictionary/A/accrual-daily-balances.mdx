@@ -1,0 +1,63 @@
+---
+title: Accrual Daily Balances
+description: The Data Dictionary entry for the Accrual Daily Balances entity
+slug: /data-dictionary/accrual-daily-balances
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Accrual Daily Balances
+
+{Array.isArray(entities.accrualDailyBalances.description) ? (
+entities.accrualDailyBalances.description.map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) ) : (<p>{entities.accrualDailyBalances.description}</p>
+)}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.accrualDailyBalances.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.accrualDailyBalances.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.accrualDailyBalances.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.accrualDailyBalances.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.accrualDailyBalances.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.accrualDailyBalances.relationship}
+  simple={true}
+/>
+
+{entities.accrualDailyBalances.additionalInformation && (
+
+  <>
+    ## Additional Information
+
+    {Array.isArray(entities.accrualDailyBalances.additionalInfo) ? (
+      entities.accrualDailyBalances.additionalInformation.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.accrualDailyBalances.additionalInfo}</p>
+    )}
+
+  </>
+)}

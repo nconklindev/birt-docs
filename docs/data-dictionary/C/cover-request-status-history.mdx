@@ -1,0 +1,67 @@
+---
+title: Cover Request Status History
+description: The Data Dictionary entry for the Cover Request Status History entity
+slug: /data-dictionary/cover-request-status-history
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Cover Request Status History
+
+{/* prettier-ignore */}
+{Array.isArray(entities.coverRequestStatusHistory.description) ? (
+  entities.coverRequestStatusHistory.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.coverRequestStatusHistory.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.coverRequestStatusHistory.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.coverRequestStatusHistory.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.coverRequestStatusHistory.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.coverRequestStatusHistory.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.coverRequestStatusHistory.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.coverRequestStatusHistory.relationship}
+  simple={true}
+/>
+
+{entities.coverRequestStatusHistory.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.coverRequestStatusHistory.additionalInfo) ? (
+      entities.coverRequestStatusHistory.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.coverRequestStatusHistory.additionalInfo}</p>
+    )}
+
+  </>
+)}

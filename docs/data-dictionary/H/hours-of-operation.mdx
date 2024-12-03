@@ -1,0 +1,67 @@
+---
+title: Hours of Operation
+description: The Data Dictionary entry for the Hours of Operation entity
+slug: /data-dictionary/hours-of-operation
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Hours of Operation
+
+{/* prettier-ignore */}
+{Array.isArray(entities.hoursOfOperation.description) ? (
+  entities.hoursOfOperation.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.hoursOfOperation.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.hoursOfOperation.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.hoursOfOperation.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.hoursOfOperation.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.hoursOfOperation.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.hoursOfOperation.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.hoursOfOperation.relationship}
+  simple={true}
+/>
+
+{entities.hoursOfOperation.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.hoursOfOperation.additionalInfo) ? (
+      entities.hoursOfOperation.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.hoursOfOperation.additionalInfo}</p>
+    )}
+
+  </>
+)}

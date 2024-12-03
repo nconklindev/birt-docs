@@ -1,0 +1,63 @@
+---
+title: Schedule Rule Overrides
+description: The Data Dictionary entry for the Schedule Rule Overrides entity
+slug: /data-dictionary/schedule-rule-overrides
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Schedule Rule Overrides
+
+{/* prettier-ignore */}
+{Array.isArray(entities.scheduleRuleOverrides.description) ? (
+  entities.scheduleRuleOverrides.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.scheduleRuleOverrides.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.scheduleRuleOverrides.supportedTypes} />
+
+## Data Granularity
+
+{entities.scheduleRuleOverrides.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.scheduleRuleOverrides.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.scheduleRuleOverrides.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.scheduleRuleOverrides.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.scheduleRuleOverrides.relationship}
+  simple={true}
+/>
+
+{entities.scheduleRuleOverrides.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.scheduleRuleOverrides.additionalInfo) ? (
+      entities.scheduleRuleOverrides.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.scheduleRuleOverrides.additionalInfo}</p>
+    )}
+
+  </>
+)}

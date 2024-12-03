@@ -1,0 +1,62 @@
+---
+title: Swap Request
+description: The Data Dictionary entry for the Swap Request entity
+slug: /data-dictionary/swap-request
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Swap Request
+
+{/* prettier-ignore */}
+{Array.isArray(entities.swapRequest.description) ? (
+  entities.swapRequest.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.swapRequest.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.swapRequest.supportedTypes} />
+
+## Data Granularity
+
+{entities.swapRequest.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.swapRequest.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.swapRequest.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.swapRequest.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.swapRequest.relationship}
+/>
+
+{entities.swapRequest.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.swapRequest.additionalInfo) ? (
+      entities.swapRequest.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.swapRequest.additionalInfo}</p>
+    )}
+
+  </>
+)}

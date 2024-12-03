@@ -1,0 +1,63 @@
+---
+title: Overtime Approvers
+description: The Data Dictionary entry for the Overtime Approvers entity
+slug: /data-dictionary/overtime-approvers
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Overtime Approvers
+
+{/* prettier-ignore */}
+{Array.isArray(entities.overtimeApprovers.description) ? (
+  entities.overtimeApprovers.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.overtimeApprovers.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.overtimeApprovers.supportedTypes} />
+
+## Data Granularity
+
+{entities.overtimeApprovers.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.overtimeApprovers.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.overtimeApprovers.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.overtimeApprovers.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.overtimeApprovers.relationship}
+  simple={true}
+/>
+
+{entities.overtimeApprovers.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.overtimeApprovers.additionalInfo) ? (
+      entities.overtimeApprovers.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.overtimeApprovers.additionalInfo}</p>
+    )}
+
+  </>
+)}

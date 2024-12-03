@@ -1,0 +1,63 @@
+---
+title: Paycode Edit Comments
+description: The Data Dictionary entry for the Paycode Edit Comments entity
+slug: /data-dictionary/paycode-edit-comments
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Paycode Edit Comments
+
+{/* prettier-ignore */}
+{Array.isArray(entities.paycodeEditComments.description) ? (
+  entities.paycodeEditComments.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.paycodeEditComments.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.paycodeEditComments.supportedTypes} />
+
+## Data Granularity
+
+{entities.paycodeEditComments.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.paycodeEditComments.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.paycodeEditComments.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.paycodeEditComments.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.paycodeEditComments.relationship}
+  simple={true}
+/>
+
+{entities.paycodeEditComments.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.paycodeEditComments.additionalInfo) ? (
+      entities.paycodeEditComments.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.paycodeEditComments.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,63 @@
+---
+title: Worked Shift
+description: The Data Dictionary entry for the Worked Shift entity
+slug: /data-dictionary/worked-shift
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Worked Shift
+
+{/* prettier-ignore */}
+{Array.isArray(entities.workedShift.description) ? (
+  entities.workedShift.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.workedShift.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.workedShift.supportedTypes} />
+
+## Data Granularity
+
+{entities.workedShift.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.workedShift.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.workedShift.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.workedShift.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.workedShift.relationship}
+  simple={true}
+/>
+
+{entities.workedShift.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.workedShift.additionalInfo) ? (
+      entities.workedShift.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.workedShift.additionalInfo}</p>
+    )}
+
+  </>
+)}

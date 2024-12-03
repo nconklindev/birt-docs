@@ -1,0 +1,63 @@
+---
+title: Worked Span
+description: The Data Dictionary entry for the Worked Span entity
+slug: /data-dictionary/worked-span
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Worked Span
+
+{/* prettier-ignore */}
+{Array.isArray(entities.workedSpan.description) ? (
+  entities.workedSpan.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.workedSpan.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.workedSpan.supportedTypes} />
+
+## Data Granularity
+
+{entities.workedSpan.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.workedSpan.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.workedSpan.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.workedSpan.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.workedSpan.relationship}
+  simple={true}
+/>
+
+{entities.workedSpan.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.workedSpan.additionalInfo) ? (
+      entities.workedSpan.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.workedSpan.additionalInfo}</p>
+    )}
+
+  </>
+)}

@@ -1,0 +1,63 @@
+---
+title: Kiosk Login
+description: The Data Dictionary entry for the Kiosk Login entity
+slug: /data-dictionary/kiosk-login
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Kiosk Login
+
+{/* prettier-ignore */}
+{Array.isArray(entities.kioskLogin.description) ? (
+  entities.kioskLogin.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.kioskLogin.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.kioskLogin.supportedTypes} />
+
+## Data Granularity
+
+{entities.kioskLogin.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.kioskLogin.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.kioskLogin.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.kioskLogin.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.kioskLogin.relationship}
+  simple={true}
+/>
+
+{entities.kioskLogin.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.kioskLogin.additionalInfo) ? (
+      entities.kioskLogin.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.kioskLogin.additionalInfo}</p>
+    )}
+
+  </>
+)}

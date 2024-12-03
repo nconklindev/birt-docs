@@ -1,0 +1,63 @@
+---
+title: Projected Totals (Exclude Corrections)
+description: The Data Dictionary entry for the Projected Totals (Exclude Corrections) entity
+slug: /data-dictionary/projected-totals-exclude-corrections
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Projected Totals (Exclude Corrections)
+
+{/* prettier-ignore */}
+{Array.isArray(entities.projectedTotalsExcludeCorrections.description) ? (
+  entities.projectedTotalsExcludeCorrections.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.projectedTotalsExcludeCorrections.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.projectedTotalsExcludeCorrections.supportedTypes} />
+
+## Data Granularity
+
+{entities.projectedTotalsExcludeCorrections.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.projectedTotalsExcludeCorrections.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.projectedTotalsExcludeCorrections.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.projectedTotalsExcludeCorrections.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.projectedTotalsExcludeCorrections.relationship}
+  simple={true}
+/>
+
+{entities.projectedTotalsExcludeCorrections.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.projectedTotalsExcludeCorrections.additionalInfo) ? (
+      entities.projectedTotalsExcludeCorrections.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.projectedTotalsExcludeCorrections.additionalInfo}</p>
+    )}
+
+  </>
+)}

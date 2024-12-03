@@ -1,0 +1,63 @@
+---
+title: Dates
+description: The Data Dictionary entry for the Dates entity
+
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Dates
+
+{/* prettier-ignore */}
+{Array.isArray(entities.employeeHcmDates.description) ? (
+  entities.employeeHcmDates.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.employeeHcmDates.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.employeeHcmDates.supportedTypes} />
+
+## Data Granularity
+
+{entities.employeeHcmDates.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.employeeHcmDates.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.employeeHcmDates.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.employeeHcmDates.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.employeeHcmDates.relationship}
+  simple={true}
+/>
+
+{entities.employeeHcmDates.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.employeeHcmDates.additionalInfo) ? (
+      entities.employeeHcmDates.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.employeeHcmDates.additionalInfo}</p>
+    )}
+
+  </>
+)}

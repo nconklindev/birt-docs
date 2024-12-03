@@ -1,0 +1,67 @@
+---
+title: Availability Request Detail
+description: The Data Dictionary entry for the Availability Request Detail entity
+slug: /data-dictionary/availability-request-detail
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Availability Request Detail
+
+{/* prettier-ignore */}
+{Array.isArray(entities.availabilityRequestDetail.description) ? (
+  entities.availabilityRequestDetail.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.availabilityRequestDetail.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable
+  supportedTypes={entities.availabilityRequestDetail.supportedTypes}
+/>
+
+## Data Granularity
+
+{entities.availabilityRequestDetail.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.availabilityRequestDetail.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList
+  relatedEntities={entities.availabilityRequestDetail.relatedEntities}
+/>
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.availabilityRequestDetail.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.availabilityRequestDetail.relationship}
+  simple={true}
+/>
+
+{entities.availabilityRequestDetail.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.availabilityRequestDetail.additionalInfo) ? (
+      entities.availabilityRequestDetail.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.availabilityRequestDetail.additionalInfo}</p>
+    )}
+
+  </>
+)}

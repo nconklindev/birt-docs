@@ -1,0 +1,63 @@
+---
+title: Labor Category
+description: The Data Dictionary entry for the Labor Category entity
+slug: /data-dictionary/labor-category
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Labor Category
+
+{/* prettier-ignore */}
+{Array.isArray(entities.laborCategory.description) ? (
+  entities.laborCategory.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.laborCategory.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.laborCategory.supportedTypes} />
+
+## Data Granularity
+
+{entities.laborCategory.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.laborCategory.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.laborCategory.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.laborCategory.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.laborCategory.relationship}
+  simple={true}
+/>
+
+{entities.laborCategory.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.laborCategory.additionalInfo) ? (
+      entities.laborCategory.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.laborCategory.additionalInfo}</p>
+    )}
+
+  </>
+)}

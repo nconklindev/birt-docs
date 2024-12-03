@@ -1,0 +1,63 @@
+---
+title: Projected Totals (Corrections Only)
+description: The Data Dictionary entry for the Projected Totals (Corrections Only) entity
+slug: /data-dictionary/projected-totals-corrections-only
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Projected Totals (Corrections Only)
+
+{/* prettier-ignore */}
+{Array.isArray(entities.projectedTotalsCorrectionsOnly.description) ? (
+  entities.projectedTotalsCorrectionsOnly.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.projectedTotalsCorrectionsOnly.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.projectedTotalsCorrectionsOnly.supportedTypes} />
+
+## Data Granularity
+
+{entities.projectedTotalsCorrectionsOnly.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.projectedTotalsCorrectionsOnly.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.projectedTotalsCorrectionsOnly.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.projectedTotalsCorrectionsOnly.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.projectedTotalsCorrectionsOnly.relationship}
+  simple={true}
+/>
+
+{entities.projectedTotalsCorrectionsOnly.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.projectedTotalsCorrectionsOnly.additionalInfo) ? (
+      entities.projectedTotalsCorrectionsOnly.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.projectedTotalsCorrectionsOnly.additionalInfo}</p>
+    )}
+
+  </>
+)}

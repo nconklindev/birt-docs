@@ -1,0 +1,63 @@
+---
+title: On Premise
+description: The Data Dictionary entry for the On Premise entity
+slug: /data-dictionary/on-premise
+---
+
+import entities from "@site/src/data/entities.json";
+
+# On Premise
+
+{/* prettier-ignore */}
+{Array.isArray(entities.onPremise.description) ? (
+  entities.onPremise.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.onPremise.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.onPremise.supportedTypes} />
+
+## Data Granularity
+
+{entities.onPremise.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.onPremise.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.onPremise.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.onPremise.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.onPremise.relationship}
+  simple={true}
+/>
+
+{entities.onPremise.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.onPremise.additionalInfo) ? (
+      entities.onPremise.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.onPremise.additionalInfo}</p>
+    )}
+
+  </>
+)}

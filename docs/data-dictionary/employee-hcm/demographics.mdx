@@ -1,0 +1,62 @@
+---
+title: Demographics
+description: The Data Dictionary entry for the Demographics entity
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Demographics
+
+{/* prettier-ignore */}
+{Array.isArray(entities.employeeHcmDemographics.description) ? (
+  entities.employeeHcmDemographics.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.employeeHcmDemographics.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.employeeHcmDemographics.supportedTypes} />
+
+## Data Granularity
+
+{entities.employeeHcmDemographics.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.employeeHcmDemographics.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.employeeHcmDemographics.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.employeeHcmDemographics.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.employeeHcmDemographics.relationship}
+  simple={true}
+/>
+
+{entities.employeeHcmDemographics.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.employeeHcmDemographics.additionalInfo) ? (
+      entities.employeeHcmDemographics.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.employeeHcmDemographics.additionalInfo}</p>
+    )}
+
+  </>
+)}

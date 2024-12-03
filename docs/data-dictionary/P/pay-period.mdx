@@ -1,0 +1,63 @@
+---
+title: Pay Period
+description: The Data Dictionary entry for the Pay Period entity
+slug: /data-dictionary/pay-period
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Pay Period
+
+{/* prettier-ignore */}
+{Array.isArray(entities.payPeriod.description) ? (
+  entities.payPeriod.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.payPeriod.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.payPeriod.supportedTypes} />
+
+## Data Granularity
+
+{entities.payPeriod.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.payPeriod.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.payPeriod.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.payPeriod.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.payPeriod.relationship}
+  simple={true}
+/>
+
+{entities.payPeriod.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.payPeriod.additionalInfo) ? (
+      entities.payPeriod.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.payPeriod.additionalInfo}</p>
+    )}
+
+  </>
+)}

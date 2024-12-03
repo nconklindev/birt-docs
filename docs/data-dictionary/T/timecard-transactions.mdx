@@ -1,0 +1,63 @@
+---
+title: Timecard Transactions
+description: The Data Dictionary entry for the Timecard Transactions entity
+slug: /data-dictionary/timecard-transactions
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Timecard Transactions
+
+{/* prettier-ignore */}
+{Array.isArray(entities.timecardTransactions.description) ? (
+  entities.timecardTransactions.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.timecardTransactions.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.timecardTransactions.supportedTypes} />
+
+## Data Granularity
+
+{entities.timecardTransactions.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.timecardTransactions.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.timecardTransactions.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.timecardTransactions.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.timecardTransactions.relationship}
+  simple={true}
+/>
+
+{entities.timecardTransactions.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.timecardTransactions.additionalInfo) ? (
+      entities.timecardTransactions.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.timecardTransactions.additionalInfo}</p>
+    )}
+
+  </>
+)}

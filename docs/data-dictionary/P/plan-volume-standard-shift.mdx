@@ -1,0 +1,63 @@
+---
+title: Plan Volume - Standard Shift
+description: The Data Dictionary entry for the Plan Volume - Standard Shift entity
+slug: /data-dictionary/plan-volume-standard-shift
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Plan Volume - Standard Shift
+
+{/* prettier-ignore */}
+{Array.isArray(entities.planVolumeStandardShift.description) ? (
+  entities.planVolumeStandardShift.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.planVolumeStandardShift.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.planVolumeStandardShift.supportedTypes} />
+
+## Data Granularity
+
+{entities.planVolumeStandardShift.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.planVolumeStandardShift.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.planVolumeStandardShift.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.planVolumeStandardShift.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.planVolumeStandardShift.relationship}
+  simple={true}
+/>
+
+{entities.planVolumeStandardShift.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.planVolumeStandardShift.additionalInfo) ? (
+      entities.planVolumeStandardShift.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.planVolumeStandardShift.additionalInfo}</p>
+    )}
+
+  </>
+)}

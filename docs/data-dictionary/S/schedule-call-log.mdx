@@ -1,0 +1,63 @@
+---
+title: Schedule Call Log
+description: The Data Dictionary entry for the Schedule Call Log entity
+slug: /data-dictionary/schedule-call-log
+---
+
+import entities from "@site/src/data/entities.json";
+
+# Schedule Call Log
+
+{/* prettier-ignore */}
+{Array.isArray(entities.scheduleCallLog.description) ? (
+  entities.scheduleCallLog.description.map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+))
+) : (
+entities.scheduleCallLog.description.split('\n').map((paragraph, index) => (
+
+<p key={index}>{paragraph}</p>
+)) )}
+
+## Supported Types
+
+<SupportedTypesTable supportedTypes={entities.scheduleCallLog.supportedTypes} />
+
+## Data Granularity
+
+{entities.scheduleCallLog.dataGranularity}
+
+## Columns
+
+<ColumnsTable columns={entities.scheduleCallLog.columns} />
+
+## Related Entities
+
+<RelatedEntitiesList relatedEntities={entities.scheduleCallLog.relatedEntities} />
+
+## Core Entity
+
+<CoreEntityTable coreEntities={entities.scheduleCallLog.coreEntity} />
+
+## Relationship
+
+<RelationshipTable
+  relationship={entities.scheduleCallLog.relationship}
+  simple={true}
+/>
+
+{entities.scheduleCallLog.additionalInfo && (
+
+  <>
+    <h2>Additional Information</h2>
+
+    {Array.isArray(entities.scheduleCallLog.additionalInfo) ? (
+      entities.scheduleCallLog.additionalInfo.map((info, index) => (
+        <p key={index}>{info}</p>
+      ))
+    ) : (
+      <p>{entities.scheduleCallLog.additionalInfo}</p>
+    )}
+
+  </>
+)}
