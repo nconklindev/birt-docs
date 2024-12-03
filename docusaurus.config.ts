@@ -9,7 +9,7 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://nconklin.github.io/birt-docs",
+  url: "https://nconklin.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -20,8 +20,8 @@ const config: Config = {
   projectName: "WFM Reporting", // Usually your repo name.
   trailingSlash: false,
 
-  onBrokenLinks: "ignore", // ! Remove this when deploying
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "throw",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -89,11 +89,6 @@ const config: Config = {
           sidebarId: "dataviewsSidebar",
           position: "left",
           label: "Dataviews",
-        },
-        {
-          to: "/about",
-          label: "About",
-          position: "left",
         },
         {
           href: "https://github.com/nconklindev/birt-docs",
