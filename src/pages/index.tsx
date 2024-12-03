@@ -40,7 +40,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Home`}
-      description="Description will go into a meta tag in <head />"
+      description="Comprehensive Pro WFM Reporting Documentation. Get started with the Data Dictionary then quickly get building custom reports and Dataviews with our detailed documentation on reporting!"
     >
       <HomepageHeader />
       <main>
