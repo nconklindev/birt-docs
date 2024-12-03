@@ -24,10 +24,10 @@ function HomepageHeader() {
             Data Dictionary
           </Link>
           <Link
-            className="button button--outline button--secondary button--lg margin-left--md"
+            className="button button--secondary button--lg margin-left--md"
             to="/docs/birt-studio/getting-started"
           >
-            BIRT Studio
+            Build Reports
           </Link>
         </div>
       </div>
