@@ -64,18 +64,3 @@ On the Report Options page (after clicking "Edit" on the Published Report), sele
 ### (Optional) Setting the Default Format
 
 To set the default format as CSV, select it from the **Default Output Type** dropdown. Click **Save** to save your changes.
-
-## Troubleshooting CSV Reports
-
-The steps involved to troubleshoot CSV reports and the errors that can occur are different than the steps involved to troubleshoot general issues that can occur in BIRT Studio so this gets its own section. The only issue that can occur with a CSV report is that the report will fail. This can happen for a few reasons.
-
-- The value for the CSV_EXPORT_TABLE_NAME or CSV_EXPORT_COLUMN_NAMES_ORDER parameter is incorrect
-- There is a misspelling or incorrect column binding name entered into the CSV_EXPORT_COLUMN_NAMES_ORDER parameter
-
-In either case, go back into the report design and make sure that the values for the parameters are correct. For the table name, make sure it matches what is set in the Properties of the table. For the column names, make sure that nothing is misspelled and that the column binding names are correct. Remember that the column binding names are whatever is set in the _Label_ field for each column in the Report Data Object.
-
-:::warning
-
-If the report completes successfully for CSV format, and there is another issue inside with the data, then the issue is not with the CSV Parameters or the CSV format. The issue could be in the report design or an issue with the data itself. If you are unsure of where the issue is coming from, open a case with Support.
-
-:::
