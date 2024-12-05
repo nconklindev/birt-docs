@@ -7,7 +7,7 @@ This is only meant to serve as the known issues with BIRT Studio and not as a co
 
 ## Computed Column Expression Does Not Update in the UI
 
-When creating a computed column expression, there is a known issue where the expression may not update in the UI after it has been saved. This is a visual issue and does not affect the functionality of the expression.
+When creating a computed column expression, there is a known issue where the expression may not update in the UI after it has been saved. This is a visual issue and does not affect the functionality of the expression. If you are having trouble knowing what expression is currently being executed, please open a case with Support who can look into the design for you and help troubleshoot.
 
 ## Drag & Drop Functionality Does Not Work as Expected
 

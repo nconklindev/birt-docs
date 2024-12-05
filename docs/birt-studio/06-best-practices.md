@@ -1,7 +1,7 @@
 ---
 title: Best Practices
 description: "A list of best practices that have been developed by report SMEs within Support and will help when building custom reports."
-sidebar_position: 99 # Use 99 so that the folder hierarchy takes precedence
+
 ---
 
 # Best Practices
@@ -33,4 +33,8 @@ A Report Data Object (RDO) should be used in at most one report and only one rep
 This rule can be broken in cases where multiple reports make use of all (or most) of the columns in the RDO, but we don't suggest using the RDO in reports where this is not the case.
 
 :::
+
+## Think of the Employees!
+
+When creating an Employee based RDO, it is best practice to add *at least* one column from the **Employee Details** entity first. This will set the relationship rules so that only those entities that relate to **Employee Details** can be added. This keeps the RDO conforming to column relationship rules and ensures your report will not have any issues due to the configuration of the RDO.
 
