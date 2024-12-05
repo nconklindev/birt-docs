@@ -60,6 +60,12 @@ const config: Config = {
   ],
 
   themeConfig: {
+    algolia: {
+      appId: '25LEFV9KWY',
+      apiKey: '9a4245f981263240eb8ead15f246f0f6',
+      indexName: 'nconklindevio',
+      contextualSearch: true,
+    },
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     docs: {
