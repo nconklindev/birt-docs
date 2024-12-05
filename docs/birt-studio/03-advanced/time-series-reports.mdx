@@ -1,0 +1,60 @@
+---
+title: Time Series Reports
+description: How to create time series reports in BIRT Studio.
+sidebar_position: 6
+---
+
+import { CirclePlus } from 'lucide-react';
+
+## What Are Time Series Reports?
+
+Time Series reports allow managers to create reports that summarize Analytics data over a period of time. This can be useful for tracking trends, identifying patterns, and making predictions based on historical data. Data can be summarized by day, week, month, or quarter. Time Series reports are supported in for both employee based and business structure based reports.
+
+:::info
+
+The only entity that can be used to provide data for a Time Series report is the Analytics entity. It can be used with Employee Details and Employee Skill Assignment, but no other entities will appear when adding columns.
+
+:::
+
+## Creating a Time Series Report
+
+### Creating the Report Data Object
+
+Creating a Time Series RDO starts the same way as the rest. Navigate to **Application Setup > Common Setup > Report Data Object Management** to start. Click the <CirclePlus className="icon" /> Add button and select your desired type, either "Employee - Time Series" or "Business Structure - Time Series".
+
+:::warning
+
+Work Unit/HCA reports are beyond the scope of what is provided in this article. They are a little more complicated than an employee or business structure time series report. For more information on creating HCA reports, please see [here](/docs/birt-studio/advanced/creating-hca-reports).
+
+:::
+
+The only difference in the new opened page compared to a standard RDO is that a Time Series RDO contains two additional dropdowns; "Time Increment" and "Time Increment Format". Both of these dropdowns are required and by default are set to "Calendar Day" and "Day of Week".
+
+Each Time Increment has different available options for the format.
+
+**Calendar Day**
+- Date
+- Day of Week
+- Day of Week + Date (e.g. Wednesday 12/04/2024)
+
+**Calendar Month**
+- Date Range
+- Month + Date Range
+- Month Name
+- Month Short Name
+
+**Calendar Quarter**
+- Date Range
+- Quarter Number
+- Quarter Number + Date Range
+- Quarter Short Number
+- Quarter Short Number + Date Range
+
+**Calendar Week**
+- Date Range
+- Week Number
+- Week Number + Date Range
+
+### Creating the Report
+
+To create the report that uses the newly created Time Series RDO, the steps are the same as other custom reports. If you need the steps to do this, please see [this](/docs/birt-studio/getting-started#creating-report-design).
