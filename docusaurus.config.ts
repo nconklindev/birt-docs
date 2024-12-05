@@ -62,6 +62,7 @@ const config: Config = {
   themeConfig: {
     algolia: {
       appId: '25LEFV9KWY',
+      // This is safe to commit to repo per Docusaurus docs
       apiKey: '9a4245f981263240eb8ead15f246f0f6',
       indexName: 'nconklindevio',
       contextualSearch: true,
