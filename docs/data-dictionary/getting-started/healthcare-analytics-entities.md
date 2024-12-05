@@ -5,12 +5,6 @@ description: Information regarding the Healthcare Analytics Entities in UKG Pro 
 
 Healthcare Analytics provides metrics and key performance indicators that measure productivity performance for all areas of the healthcare organization for acute care.
 
-:::warning
-
-The Healthcare Analytics entities and columns are available only from the API and cannot be used in Dataviews or to create reports at this time. To get the Healthcare Analytics data, use the Retrieve Data (POST /v1/commons/data/multi_read) API operation. Retrieve only the WORKUNIT and WORKUNIT_TIMESERIES data and ignore the Employee and Location data.
-
-:::
-
 Managers can compare the hours and amounts worked against a target and they can perform variance analysis. Managers can do this analysis for daily activity based on timekeeping data, or can do pay period analysis based on payroll activity. In addition to reporting daily and pay period activity, you can return results for the last six pay periods or the year-to-date (YTD) pay period. These options allow analysis of historical trends. Finally, managers can evaluate the metrics and key performance indicators for full-time and part-time staff, as well as for supplemental types of labor (Overtime, Float, Agency, Internal Agency, Pool, Per Diem) all of which allows the managers to see and understand the labor distribution.
 
 Healthcare Analytics gives you the power to measure and manage productivity — daily and by pay period — by analysis of transactions from a facility’s billing (volume), payroll, and timekeeping data.
