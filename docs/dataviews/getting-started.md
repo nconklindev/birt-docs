@@ -1,6 +1,7 @@
 ---
 title: Getting Started with Dataviews
 description: An introductory guide to creating Dataviews in UKG Pro WFM
+sidebar_position: 1
 ---
 
 # Getting Started
