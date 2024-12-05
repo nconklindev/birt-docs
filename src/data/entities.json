@@ -9773,11 +9773,7 @@
         "dataType": "String"
       }
     ],
-    "supportedTypes": [
-      "employee",
-      "businessStructure",
-      "employee time series"
-    ],
+    "supportedTypes": ["employee", "businessStructure", "employee time series"],
     "relatedEntities": [
       "Absence Exceptions",
       "Accrual Code",
@@ -10056,11 +10052,7 @@
         "dataType": "String"
       }
     ],
-    "supportedTypes": [
-      "employee",
-      "businessStructure",
-      "employee time series"
-    ],
+    "supportedTypes": ["employee", "businessStructure", "employee time series"],
     "relatedEntities": ["Employee Details"],
     "coreEntity": ["employee"],
     "relationship": "1:1"
@@ -11721,6 +11713,12 @@
         "description": "",
         "key": "PERSONAL_INFORMATION_EMPL_PRIMARY_ADDR_STATE_ID",
         "dataType": "String"
+      },
+      {
+        "label": "Custom Field",
+        "description": "",
+        "key": "PERSONAL_INFORMATION_EMPL_CUSTOM_*",
+        "dataType": "String"
       }
     ],
     "supportedTypes": ["employee"],
@@ -11793,7 +11791,8 @@
       "Worked Span Out Punch"
     ],
     "coreEntity": ["employee"],
-    "relationship": "1:1"
+    "relationship": "1:1",
+    "additionalInfo": "The PERSONAL_INFORMATION_EMPL_CUSTOM_* column is defined within HCM in the employee custom fields for an employee record. The `*` will be a number based on which field is populated."
   },
   "employeeHcmPerspectiveScore": {
     "name": "Employee HCM - Perspective Score",
@@ -16077,11 +16076,7 @@
         "dataType": "String"
       }
     ],
-    "supportedTypes": [
-      "employee",
-      "businessStructure",
-      "employee time series"
-    ],
+    "supportedTypes": ["employee", "businessStructure", "employee time series"],
     "relatedEntities": ["Employee Details"],
     "coreEntity": ["employee"],
     "relationship": "1:1"
@@ -17342,11 +17337,7 @@
         "dataType": "String"
       }
     ],
-    "supportedTypes": [
-      "employee",
-      "businessStructure",
-      "employee time series"
-    ],
+    "supportedTypes": ["employee", "businessStructure", "employee time series"],
     "relatedEntities": ["Employee Details"],
     "coreEntity": ["employee"],
     "relationship": "1:1"
