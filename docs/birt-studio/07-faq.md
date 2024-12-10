@@ -79,3 +79,7 @@ We also have a few articles on creating a specific type of report such as "Hours
 The templates provided in the external KB article are only getting started points and are not meant to be a complete solution. Some may work as-is, but most will likely require modification to tailor the report to your business's needs.
 
 :::
+
+## I'm receiving a WFP-114330 Error when trying to schedule a report. What does this mean?
+
+The full text of this error is "WFP-114330 Saved location and private Hyperfind parameters are not allowed for different run as user." This error occurs when a report is scheduled to run as a user that does not have access to the saved location or private Hyperfind parameters. In order to use private Hyperfinds or saved locations, a Function Access Profile setting must be set to allowed. The setting is **Manager - Department Manager > Reports > Schedule reports for others**.
