@@ -38,3 +38,21 @@ This rule can be broken in cases where multiple reports make use of all (or most
 
 When creating an Employee based RDO, it is best practice to add *at least* one column from the **Employee Details** entity first. This will set the relationship rules so that only those entities that relate to **Employee Details** can be added. This keeps the RDO conforming to column relationship rules and ensures your report will not have any issues due to the configuration of the RDO.
 
+## Leave Column Relationship Rules On
+
+When building an RDO or Dataview, the Column Relationship Rules checkbox is enabled by default and the control is hidden behind a Feature Switch. The Feature Switch is called "Ability to disable column relationship rules". Enabling this setting will make the checkbox visible again. While this Feature Switch can be enabled to show the checkbox again, we **do not recommend disabling column relationship rules**.
+
+:::danger
+
+By disabling column relationship rules, you are opening your RDO/Dataview up for potential issues. When unrelated entities are used together in an RDO, the report may display unexpected behaviors. Some indications that unrelated entities are being used are:
+
+- Duplicate rows with seemingly the same data
+- Blank rows
+- "Duplicate" rows where one row shows data in some columns and not others and the subsequent rows showing data in the other columns
+- No data
+- Errors
+
+If a Support case is entered and the issue is with a report or Dataview that has Column Relationship Rules disabled, Support will not be able to assist until a new RDO or Dataview is created with Column Relationship Rules enabled.
+
+:::
+
