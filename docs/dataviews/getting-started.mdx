@@ -1,0 +1,172 @@
+---
+title: Getting Started
+description: An introductory guide to creating Dataviews in UKG Pro WFM
+sidebar_position: 1
+---
+
+import { CirclePlus, Pencil, ArrowDownUp } from "lucide-react";
+
+# Getting Started with Dataviews
+
+:::warning
+
+Before getting started with creating Dataviews, it is highly recommended that you at least review the [Getting Started](/docs/data-dictionary/getting-started) article on the Data Dictionary. It's a quick read and covers important topics like column relationship rules and things to note during column selection. There will be many terms that are referenced there that will not make sense if you are just getting started with reporting/Dataviews in Pro WFM.
+
+:::
+
+This article won't assume any knowledge of reporting and will cover the basics of creating a Dataview in Pro WFM. If you are already familiar with creating reports in Pro WFM, you will most likely find this article very similar to the process of creating a report.
+
+This article will review the basics of creating an employee based Dataview as that is the most common Dataview that is created in Pro WFM. For information on more specific types of Dataviews, see their corresponding articles in the sidebar.
+
+:::info
+
+For more information on creating specific Dataviews, please see the [reporting cookbook](/docs/birt-studio/report-cookbook) on some basic recipes and examples that will get you started. The examples there will work the same for a Dataview.
+
+:::
+
+## When to Use Dataviews
+
+Dataviews are a great way to view data in Pro WFM. They are less customizable than reports, but they are also easier to create and maintain. If you need to view data in a way that is not already available in a report (and even if it is!), a Dataview is a great way to do that. You may want to choose a report over a Dataview if:
+
+- You need to schedule the report to run at a specific time
+- You need to export the report to a file
+- You need to email the report to one or many managers
+- You have specific formatting requirements for the report
+- You have custom logic that needs to be implemented
+
+## Creating a Dataview
+
+To get started creating a Dataview, navigate to **Application Setup** from the Home Menu. In **Application Setup**, navigate to **Display Preferenes > Dataview Management**. Click on the <CirclePlus className="icon"/> Add icon and select your view. For this example, we will be creating an employee based Dataview. We select "Employee View". The other options listed will be:
+
+- Business Structure View
+- Employee Time Series View
+- Business Structure Time Series View
+- Work Unit View
+- Work Unit Time Series View
+
+:::info
+
+Work Unit and Work Unit Time Series View will only be visible if the tenant has the Healthcare Analytics entitlement.
+
+:::
+
+### Adding Columns
+
+To add columns to your Dataview, click on the <CirclePlus className="icon" /> Add icon above the "Columns" table. This will bring up a "Select Column" window that contains a table with the following columns:
+
+- Entity
+- Category
+- Column Name
+- Description
+- Type
+
+These columns can be filtered by entering text in the text box below the column header labels. If you know what you are looking for, enter it here. Column names and entities can be found in the [Data Dictionary](/docs/data-dictionary/getting-started).
+
+To select a column, select it and then click the "Add Column" button. After you click a column to select it, the active window will switch to a "Add Column Properties" window which displays more fields.
+
+To configure your column, you have the following fields available:
+
+- Label
+- Width
+- [Visible](#hidingshowing-columns)
+- [Group By](#grouping)
+- [Calculate](#adding-calculations)
+- [Sort](#sorting)
+- [Filter Operator](#filtering)
+
+The Label and Width will set the column header and width of the column, respectively.
+
+:::tip
+
+All changes made in the following sections will apply to _all_ users who view the Dataview. It is setting the default behavior and configuration for the Dataview.
+
+:::
+
+### Hiding/Showing Columns
+
+To make a column hidden or invisible, select "Yes" for the "Visible" label in "Add Column Properties". Hiding a column in Dataview Management will hide the column from all users who open the Dataview. To make a column visible again, edit it from the "Columns" table and select "Yes".
+
+### Grouping
+
+To group by a column, select "Yes" for the "Group By" label in "Add Column Properties". You can apply multiple groups by selecting "Yes" for multiple columns. The group that was applied first will always appear as the top-level grouping. This group order can be changed by clicking the <ArrowDownUp className="icon" /> Re-Order icon above the "Columns" table and selecting "Group by Columns". The order can be changed by selecting a grouped column and clicking the up or down arrows. The columns will appear grouped in the order they appear in this list.
+
+### Adding Calculations
+
+Every column can have a calculation applied to it by selecting an option from the "Calculate" dropdown. Certain data types will have more or fewer options than others. For example, a "String" type column will only have the "Count" option available, whereas numerical columns such as "Actual Total Hours (Include Corrections)" will have "Sum", "Avg", "Max" and "Min".
+
+Calculations will automatically apply to every group if one is set, otherwise, it will set the calculation at the table level. If a calculation is only at the table level, it will only display at the very bottom of the Dataview.
+
+### Sorting
+
+Every column added to a Dataview can be sorted from the "Add Column Properties" window. Select the column in the "Columns" table and click the <Pencil className="icon" /> Edit icon to bring this window up. There are only ever two options for sorting, regardless of data type; ascending and descending. Multiple columns can be sorted and the Dataview will automatically sort the columns in the order specified. This order can be changed by clicking the <ArrowDownUp className="icon" /> Re-Order icon above the "Columns" table and selecting "Sort Priority". The columns in this list can be moved up or down in the priority by clicking the up and down arrows.
+
+For example, if you have the following columns in the following order (all set to ascending):
+
+- Employee Full Name
+- Start Date Time
+- Actual Hours
+
+This will sort employees by last name alphabetically, then by the start date and time of an in punch, and lastly by the number of hours earned for the segment.
+
+:::tip
+
+If items are not appearing in your Dataview in the order you are wanting, try checking the Sort Priority to make sure it is correct.
+
+:::
+
+### Filtering
+
+To filter a column, select it from the "Columns" table and then click the <Pencil className="icon" /> Edit icon. This will bring up the "Add Column Properties" window. In this window, you can set the "Filter Operator" and "Filter Value" fields. The "Filter Operator" field will determine how the filter is applied to the column. The "Filter Value" field will determine what value the filter is applied to. The available filters are:
+
+- Starts With
+- Not Starts With
+- Custom: Allows some syntax from regular expressions (regex), which are special text stings that describe a search pattern to find items within a body of text. They work similarly to wildcards, but you can construct them to search for more complex and sophisticated patterns.
+- In
+- Not In
+- Equal To
+- Not Equal To
+- Is Null
+- Is Not Null
+- Between
+- Not Between
+- All
+- Yes
+- No
+
+:::info
+
+To separate multiple values when using the IN and NOT IN filter operators, or when using the BETWEEN and NOT BETWEEN operators, use a semicolon (`;`).
+
+:::
+
+#### Custom Filter Syntax
+
+The Custom filter syntax only allows a small subset of what regex is fully capable of. See the below examples of allowed syntax.
+
+- .\*data.\* - all entries that contains the word data.
+- AA;ZZ - all items between AA and ZZ
+- U[Sb]A - USA or Uba
+- U[r-t]A - a range of characters, in this case Ura, Usa, Uta
+- (?!USA).\* - any value that is not USA.
+
+### Saving a Dataview
+
+Once you are satisfied with your changes, press the **Save** button to save your Dataview. If you receive any errors, please see our [troubleshooting](/docs/dataviews/troubleshooting) article for more information on specific errors and how to troubleshoot and/or fix.
+
+### (Optional) Adding a Dataview to a Dataview Profile
+
+:::tip
+
+If you need to assign your newly created Dataview to other managers or employees, you may want to read this section.
+
+:::
+
+If you have users that are not using the "All Dataviews" Dataview Profile, you will need to add your newly created Dataview to other Dataview Profiles. The Dataview Profile is added in the Display Profile for employees and managers. Display Profiles are located in **Application Setup > Display Preferences > Dataview Profile**. Selecting a Dataview Profile and clicking <Pencil className="icon" /> Edit will move to a new page that contains a list of all configured Dataviews in the application. Any Dataviews within the profile will be under the "Currently Assigned" label. Clicking on an unchecked Dataview in the scrollable list will add it to "Currently Assigned".
+
+Click Save at the top of the page when finished.
+
+:::info
+
+Users who are currently logged in and had their Dataview Profiles changed may need to logout and log back in for changes to take effect. If a user does not see the Dataview after saving their Dataview Profile, they should logout and back in.
+
+:::
