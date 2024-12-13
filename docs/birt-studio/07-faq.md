@@ -20,7 +20,7 @@ If you have verified these items, please open a case with Support.
 
 Any Read-Only report, whether Standard or Custom, are reports that are developed by Engineering and Professional Services outside of BIRT Studio. Support nor customers have access to this tool and therefore these reports cannot be edited. If you have a Read-Only report that needs to be edited, please open a Service Request.
 
-## I want to report on _____ configuration within the application. Can I?
+## I want to report on \_\_\_ configuration within the application. Can I?
 
 At this time, there are no exposed entities that will allow a user to report on application configuration. The best way to get this data is to utilize the [developer portal](https://developer.ukg.com) and go through the different endpoints to see if there is an endpoint that will provide the data you are looking for.
 
@@ -40,7 +40,7 @@ If you are not the one that made the change or do not remember what column was d
 
 :::info
 
-The column that is added back must be added back *exactly* the way it was previously. For example, if you deleted an "Actual Total Hours (Include Corrections)" that was parameterized by "Employee, Pay Code, Date" and you only add back the "Actual Total Hours (Include Corrections)" without changing the parameter, it will not work. It must be the exact same. In this case, it would need to be set to "Employee, Pay Code, Date".
+The column that is added back must be added back _exactly_ the way it was previously. For example, if you deleted an "Actual Total Hours (Include Corrections)" that was parameterized by "Employee, Pay Code, Date" and you only add back the "Actual Total Hours (Include Corrections)" without changing the parameter, it will not work. It must be the exact same. In this case, it would need to be set to "Employee, Pay Code, Date".
 
 :::
 
@@ -54,7 +54,7 @@ Answering this question simply in an FAQ is not possible. There is no one "right
 
 ## I'm a manager with access to the entire organization. Why can I not see anyone else's reports they have run?
 
-This is by design. Any manager that has access to the Report Library will only be able to see the reports that have been *run by* them. This includes scheduled reporting jobs that designate the manager as the "Run As" user.
+This is by design. Any manager that has access to the Report Library will only be able to see the reports that have been _run by_ them. This includes scheduled reporting jobs that designate the manager as the "Run As" user.
 
 ## I updated a column in my RDO to change the Assignment, but the report is still showing the old Assignment. Why?
 
@@ -68,7 +68,7 @@ When you update a column in the RDO, you must also update the report design to r
 
 This pop-up is not an error and is common during the report design process. In BIRT Studio, the default parameters are today - today for All Home Locations (not All Home). This pop-up can simply mean that the conditions that are set in the report design for those default parameters return nothing. However, when run for a different set of parameters, the report will return data. Test the report by previewing it for a wider timeframe and All Home Locations (or smaller if All Home Locations is too large).
 
-## How do I make _____ report?
+## How do I make **\_** report?
 
 While we aim to provide the best documentation possible on reporting, BIRT Studio and Dataviews, we aren't able to create custom tailored articles for all different kinds of reports. Please see the [cookbook](/docs/birt-studio/report-cookbook) for basic recipes on getting started creating specific kinds of reports. **These are not full how-to articles**.
 
@@ -80,6 +80,15 @@ The templates provided in the external KB article are only getting started point
 
 :::
 
-## I'm receiving a WFP-114330 Error when trying to schedule a report. What does this mean?
+## I'm receiving a WFP-114330 Error when trying to schedule a report.
 
 The full text of this error is "WFP-114330 Saved location and private Hyperfind parameters are not allowed for different run as user." This error occurs when a report is scheduled to run as a user that does not have access to the saved location or private Hyperfind parameters. In order to use private Hyperfinds or saved locations, a Function Access Profile setting must be set to allowed. The setting is **Manager - Department Manager > Reports > Schedule reports for others**.
+
+## My report displays a red error showing code WFM-COMMON-1234. What is this and how do I fix it?
+
+This error can be displayed for a number of reasons. Some reasons this error can be displayed are:
+
+- Unrelated entities being used together in an RDO
+- The user running the report does not have access to all or some of the data being requested
+
+For more information on this error and how to troubleshoot, please see the [troubleshooting](/docs/birt-studio/troubleshooting/birt-studio) page.
