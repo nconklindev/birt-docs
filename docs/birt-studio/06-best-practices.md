@@ -1,7 +1,6 @@
 ---
 title: Best Practices
 description: "A list of best practices that have been developed by report SMEs within Support and will help when building custom reports."
-
 ---
 
 # Best Practices
@@ -26,7 +25,7 @@ When naming your report, it is best to follow a standard naming convention. Typi
 
 ## Each Report Data Object Has a Purpose
 
-A Report Data Object (RDO) should be used in at most one report and only one report. The idea is that an RDO should contain *only* the exact number of columns that a single report needs. This helps prevent any future issues or conflicts that may come up if the RDO was to be used in multiple reports. This also helps keep runtimes down in reports that do not make use of all of the columns. This is because even when a column is added into an RDO but not used in the report design, the data is still requested when the report is run, which can increase the runtime of the report.
+A Report Data Object (RDO) should be used in at most one report and only one report. The idea is that an RDO should contain _only_ the exact number of columns that a single report needs. This helps prevent any future issues or conflicts that may come up if the RDO was to be used in multiple reports. This also helps keep runtimes down in reports that do not make use of all of the columns. This is because even when a column is added into an RDO but not used in the report design, the data is still requested when the report is run, which can increase the runtime of the report.
 
 :::note
 
@@ -36,7 +35,7 @@ This rule can be broken in cases where multiple reports make use of all (or most
 
 ## Think of the Employees!
 
-When creating an Employee based RDO, it is best practice to add *at least* one column from the **Employee Details** entity first. This will set the relationship rules so that only those entities that relate to **Employee Details** can be added. This keeps the RDO conforming to column relationship rules and ensures your report will not have any issues due to the configuration of the RDO.
+When creating an Employee based RDO, it is best practice to add _at least_ one column from the **Employee Details** entity first. This will set the relationship rules so that only those entities that relate to **Employee Details** can be added. This keeps the RDO conforming to column relationship rules and ensures your report will not have any issues due to the configuration of the RDO.
 
 ## Leave Column Relationship Rules On
 
@@ -55,4 +54,3 @@ By disabling column relationship rules, you are opening your RDO/Dataview up for
 If a Support case is entered and the issue is with a report or Dataview that has Column Relationship Rules disabled, Support will not be able to assist until a new RDO or Dataview is created with Column Relationship Rules enabled.
 
 :::
-
