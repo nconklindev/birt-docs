@@ -8,30 +8,40 @@ sidebar_position: 99
 
 If a CSV report is failing, this can happen for a few reasons.
 
-- The value for the CSV_EXPORT_TABLE_NAME or CSV_EXPORT_COLUMN_NAMES_ORDER parameter is incorrect
-- There is a misspelling or incorrect column binding name entered into the CSV_EXPORT_COLUMN_NAMES_ORDER parameter
+-   The value for the CSV_EXPORT_TABLE_NAME or CSV_EXPORT_COLUMN_NAMES_ORDER parameter is incorrect
+-   There is a misspelling or incorrect column binding name entered into the CSV_EXPORT_COLUMN_NAMES_ORDER parameter
 
-In either case, go back into the report design and make sure that the values for the parameters are correct. For the table name, make sure it matches what is set in the Properties of the table. For the column names, make sure that nothing is misspelled and that the column binding names are correct. Remember that the column binding names are whatever is set in the _Label_ field for each column in the Report Data Object.
+In either case, go back into the report design and make sure that the values for the parameters are correct. For the
+table name, make sure it matches what is set in the Properties of the table. For the column names, make sure that
+nothing is misspelled and that the column binding names are correct. Remember that the column binding names are whatever
+is set in the _Label_ field for each column in the Report Data Object.
 
 :::warning
 
-If the report completes successfully for CSV format, and there is another issue inside with the data, then the issue is not with the CSV Parameters or the CSV format. The issue could be in the report design or an issue with the data itself. If you are unsure of where the issue is coming from, open a case with Support.
+If the report completes successfully for CSV format, and there is another issue inside with the data, then the issue is
+not with the CSV Parameters or the CSV format. The issue could be in the report design or an issue with the data itself.
+If you are unsure of where the issue is coming from, open a case with Support.
 
 :::
 
 ## Provided Columns are not Exporting
 
-If a CSV report is running but is not exporting the columns that you have configured in the CSV_EXPORT_COLUMN_NAMES_ORDER parameter, try the following steps:
+If a CSV report is running but is not exporting the columns that you have configured in the
+CSV_EXPORT_COLUMN_NAMES_ORDER parameter, try the following steps:
 
 1. Verify that the column names are typed correctly.
-    - For standard columns from the Report Data Object (RDO), this is the column "Label" configured for the column in the RDO.
+    - For standard columns from the Report Data Object (RDO), this is the column "Label" configured for the column in
+      the RDO.
     - For computed columns, this is the name that was set when the column was created.
 2. Edit the Report Options and remove CSV as an available format then save.
 3. Run a test report for any format and a short timeframe and small Hyperfind that has data (this should complete).
 4. Edit the report design again and verify all columns are in the CSV_EXPORT_COLUMN_NAMES_ORDER parameter
-5. If everything looks OK, save if there are any changes, then edit the Report Options, adding in CSV as an available format again and save.
+5. If everything looks OK, save if there are any changes, then edit the Report Options, adding in CSV as an available
+   format again and save.
 6. Test the report in CSV format
 
 ## How To Get Help
 
-After performing the steps provided for your issue and either the same issue persists or you are now encountering a new issue, Support is available! Please open a Support case through the [Community](https://community.ukg.com) and a technician will be happy to assist.
+After performing the steps provided for your issue and either the same issue persists or you are now encountering a new
+issue, Support is available! Please open a Support case through the [Community](https://community.ukg.com) and a
+technician will be happy to assist.
