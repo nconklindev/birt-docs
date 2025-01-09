@@ -4,7 +4,7 @@ description: The Data Dictionary entry for the Timecard Transactions entity
 slug: /data-dictionary/timecard-transactions
 ---
 
-import entities from "@site/src/data/entities.json";
+import entities from '@site/src/data/entities.json';
 
 # Timecard Transactions
 
@@ -12,9 +12,7 @@ import entities from "@site/src/data/entities.json";
 {Array.isArray(entities.timecardTransactions.description) ? (
   entities.timecardTransactions.description.map((paragraph, index) => (
     <p key={index}>{paragraph}</p>
-))
-) : (
-entities.timecardTransactions.description.split('\n').map((paragraph, index) => (
+)) ) : ( entities.timecardTransactions.description.split('\n').map((paragraph, index) => (
 
 <p key={index}>{paragraph}</p>
 )) )}
@@ -26,6 +24,22 @@ entities.timecardTransactions.description.split('\n').map((paragraph, index) => 
 ## Data Granularity
 
 {entities.timecardTransactions.dataGranularity}
+
+## Transaction Types
+
+| Transaction Type          | Description                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Absence Exceptions        | Transaction type that returns excused and unexcused absence exceptions                                                                                                                                                                                                                                                                         |
+| Historical Corrections    | Transaction type that returns Historical Correction transactions performed during the selected time period                                                                                                                                                                                                                                     |
+| Hours Worked              | Transaction type that returns only Hours Worked transactions                                                                                                                                                                                                                                                                                   |
+| Overtime Approvals        | Symbolic transaction type that returns all Pending Overtime, Overtime Approval, and Overtime Denial transactions                                                                                                                                                                                                                               |
+| Paycode Edit              | Transaction type that will return only Paycode Edit transactions                                                                                                                                                                                                                                                                               |
+| Raw Total                 | Transaction type that returns the totals as produced by the Totalizer. Data is returned for each worked span by employee, paycode, worked job, worked labor category, worked cost center, and worked work rule                                                                                                                                 |
+| Raw Total by Calendar Day | Transaction type that returns the same data as the Raw Total transaction type, but worked spans that cross midnight will be split to provide the totals per day, regardless of the employee's pay rule. Data is returned for each worked span by employee, paycode, worked job, worked labor category, worked cost center and worked work rule |
+| Raw Totals                | Symbolic transaction type that returns all Raw Total and Raw Total By Calendar Day transactions                                                                                                                                                                                                                                                |
+| Time Detail               | Symbolic transaction type that returns all Worked Shift Segment, Paycode Edit, Absence Exception, Historical Correction, Hours Worked, and Worked Holiday Edit transactions                                                                                                                                                                    |
+| Worked Holiday Edit       | Transaction type that returns only Worked Holiday Edit transactions                                                                                                                                                                                                                                                                            |
+| Worked Shift Segment      | Transaction type that returns only Worked Shift Segment transactions                                                                                                                                                                                                                                                                           |
 
 ## Columns
 
@@ -41,10 +55,7 @@ entities.timecardTransactions.description.split('\n').map((paragraph, index) => 
 
 ## Relationship
 
-<RelationshipTable
-  relationship={entities.timecardTransactions.relationship}
-  simple={true}
-/>
+<RelationshipTable relationship={entities.timecardTransactions.relationship} simple={true} />
 
 {entities.timecardTransactions.additionalInfo && (
 
