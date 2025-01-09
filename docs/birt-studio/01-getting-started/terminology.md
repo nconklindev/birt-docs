@@ -56,9 +56,9 @@ The software available in Pro WFM for any manager with the necessary access to b
 
 ### Column
 
-The item that is selected in the [Report Data Object](#report-data-object) to be returned in the report design. A
-vertical series of objects within a table or chart. Used with a capital *C*olumn when differentiating between Crosstab
-Columns and RDO columns (when used in the same context).
+The item that is selected in the [Report Data Object](#report-data-object) to be returned in the report design, or can
+be computed from existing data in a report. A vertical series of objects within a table or chart. Used with a capital
+*C*olumn when differentiating between Crosstab Columns and RDO columns (when used in the same context).
 
 ### Column header
 
