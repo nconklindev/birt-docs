@@ -12,8 +12,8 @@ custom reports.
 
 :::info
 
-None of these are a must, but not following some of these have been known to cause issues with reports or add to report
-development time due to confusion, unclear namings or other reason.
+None of these are a must, and should not be taken as absolute, but not following some of these have been known to cause
+issues with reports or add to report development time due to confusion, unclear namings or other reason.
 
 :::
 
@@ -73,5 +73,45 @@ entities are being used are:
 
 If a Support case is entered and the issue is with a report or Dataview that has Column Relationship Rules disabled,
 Support will not be able to assist until a new RDO or Dataview is created with Column Relationship Rules enabled.
+
+:::
+
+## Each Report Has a Purpose
+
+Just like [above](#each-report-data-object-has-a-purpose), each report should have a purpose too. It is easy to get
+carried away with creating dozens of computed columns, aggregating unnecessarily, applying too much formatting, etc. and
+before you know it, BIRT can no longer load your report, it loads much slower, it starts to fail, or things stop working
+while editing. These are all symptoms and indications that a report might be trying to do _too_ much.
+
+The best recommendation is to start with a single idea and a single desired goal of what the report should tell an
+end-user. Here are some tips to help you focus your ideas:
+
+**Be as specific as possible** <br/> Want to create a report of Paycode totals? Great! Which ones? Do the Paycodes have
+something in common that would help you further identify your goal (e.g. are they all Overtime Paycodes, are they all
+related to Exceptions, Leave or Absences)? Being specific in your goal and desired output will help prevent scope creep
+and any potential issues down the road.
+
+**Computed columns for the sake of computed columns** <br /> Don't create computed columns just for the sake of computed
+columns. If a computed column is made, don't _not_ use it somewhere in your report. Remember, every computed column adds
+to what needs to be loaded when editing a report design and running a report.
+
+:::info
+
+Most computed column expressions are "free" in that they shouldn't cause too much overhead. The issue starts when one
+computed column is trying to do too much or there are too many computed columns all doing the same thing (such as
+computing out hours for a Paycode and returning those hours in a column instead of a row).
+
+:::
+
+**Follow these best practices** <br /> The best practices presented here and in our articles on this site are meant to
+guide you to creating the best report possible with zero issues in the final report.
+
+If you feel your report is following these suggestions and you are still having issues with your report failing to open,
+failing to run, or returning errors, please open a case with Support.
+
+:::warning
+
+Troubleshooting issues where these best practices are not followed are difficult and a first step may be to go back and
+rework the RDO or design.
 
 :::
